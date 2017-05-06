@@ -15,7 +15,7 @@ var lamps = [
 ];
 
 var enemies = [
-	new Enemy( 4 * 80,3 * 80,3 )
+	new Enemy( 4 * 80,3 * 80,[3,3,3,1,1,2,2,2,2,0,0,3] )
 ];
 var fallingFloors = [
 	new FallingFloor( 4 * 80,4 * 80,80,80 ),
@@ -87,20 +87,8 @@ function Update()
 		// player.speed = 0;
 		player.SetDead( true );
 	}
-	enemies.forEach( function( enemy )
-	{
-		enemy.UpdateAI();
-		// enemies[i].Move( enemies[i].CheckAIMoveDir( tileMap ),player.speed );
-		if( player.GetX( true ) === enemy.GetX() && player.GetY( true ) === enemy.GetY() )
-		{
-			// player.SetDead( true );
-			player.Move( enemy.GetNextPos(),player.speed );
-		}
-		else if( player.GetX( true ) === enemy.GetSlimeX() && player.GetY( true ) === enemy.GetSlimeY() )
-		{
-			// player.SetDead( true );
-		}
-	});
+	tileMap.Update( player );
+	/*
 	for( var i = 0; i < fallingFloors.length; ++i )
 	{
 		fallingFloors[i].Update();
@@ -116,19 +104,9 @@ function Update()
 			}
 		}
 	}
-	/*
-	for( var i = 0; i < spikes.length; ++i )
-	{
-		if( player.GetX( true ) === spikes[i].GetX() && player.GetY( true ) === spikes[i].GetY() && spikes[i].GetActive() )
-		{
-			player.SetDead( true );
-		}
-		spikes[i].Update();
-	}
 	*/
 	if( playerMoveCounter > playerMoveCounterMax )
 	{
-		tileMap.UpdateMap();
 		if( !player.GetDead() )
 		{
 			if( keyMap[87] )
@@ -176,18 +154,17 @@ function Draw()
 	{
 		// spikes[i].Draw();
 	}
-	enemies.forEach( function( enemy )
-	{
-		enemy.Draw();
-	});
 	fallingFloors.forEach( function( tile )
 	{
-		tile.Draw();
+		// tile.Draw();
 	});
 	player.Draw();
 	for( var i = 0; i < lamps.length; ++i )
 	{
 		// lamps[i].Draw();
 	}
-	tileMap.CheckMouseData( mouse.x,mouse.y );
+	if( keyMap[17] )
+	{
+		tileMap.CheckMouseData( mouse.x,mouse.y );
+	}
 }

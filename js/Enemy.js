@@ -1,6 +1,6 @@
 class Enemy
 {
-	constructor( x,y,dir )
+	constructor( x,y,moveCycle )
 	{
 		this.x = x;
 		this.y = y;
@@ -9,7 +9,7 @@ class Enemy
 		this.c = "#11DD22";
 		this.moveCounter = 0;
 		this.moveCounterMax = 5; // speed, lower is faster
-		this.moveCycle = [ 3,3,3,1,1,2,2,2,2,0,0,3 ];
+		this.moveCycle = moveCycle;
 		this.moveCycleCounter = 0;
 		this.slime = { x:this.x,y:this.y };
 	}
@@ -97,6 +97,6 @@ class Enemy
 	}
 	GetNextPos()
 	{
-		return this.moveCycle[this.moveCycleCounter + 1];
+		return this.moveCycle[this.moveCycleCounter + 0];
 	}
 }
