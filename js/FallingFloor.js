@@ -23,7 +23,7 @@ class FallingFloor
 		];
 		this.isFalling = false;
 		this.fallCounter = 0;
-		this.fallCounterMax = 50;
+		this.fallCounterMax = 30;
 		this.xStart = this.x;
 		this.yStart = this.y;
 		this.wStart = this.w;
@@ -92,5 +92,9 @@ class FallingFloor
 	SetFalling( willFall )
 	{
 		this.isFalling = willFall;
+	}
+	Reset()
+	{
+		this.isFalling = true;
 	}
 }

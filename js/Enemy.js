@@ -6,7 +6,7 @@ class Enemy
 		this.y = y;
 		this.w = 80;
 		this.h = 80;
-		this.c = "#11DD22";
+		this.c = "#" + Random( 11,99 ) + "DD" + Random( 11,99 );
 		this.moveCounter = 0;
 		this.moveCounterMax = 5; // speed, lower is faster
 		this.moveCycle = moveCycle;
@@ -76,7 +76,7 @@ class Enemy
 			this.slime.x = this.x - 80;
 		}
 		// Rect( this.x,this.y,this.w,this.h,"#00FF00",0.3 );
-		Rect( this.slime.x,this.slime.y,this.w,this.h,"#00FF00",0.4 );
+		Rect( this.slime.x,this.slime.y,this.w,this.h,this.c,0.4 );
 		// Rect( this.x + 1 * 80,this.y,this.w,this.h,"#00FF00",0.1 );
 	}
 	GetX()

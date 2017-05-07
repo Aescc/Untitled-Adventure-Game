@@ -1,15 +1,15 @@
 class Spike
 {
-	constructor( x,y )
+	constructor( x,y,startingFrame )
 	{
 		this.x = x;
 		this.y = y;
 		this.w = 80;
 		this.h = 80;
-		this.c = "#666666";
+		this.c = [ "#666666","#775544","#884433","#993322" ];
 		this.isActive = false;
-		this.moveCycle = [ 0,0,0,0,1,1,2,2,3,3,3,2,2,1,1];
-		this.moveCycleCounter = 0;
+		this.moveCycle = [ 0,0,0,1,1,2,2,3,3,3,3,2,2,1,1 ];
+		this.moveCycleCounter = startingFrame;
 		this.waitTimer = 0;
 		this.waitTimerMax = 2;
 	}
@@ -31,14 +31,39 @@ class Spike
 		{
 			++this.waitTimer;
 		}
+		this.UpdateColor();
 	}
 	Draw()
 	{
-		Rect( this.x,this.y,this.w,this.h,this.c );
+		if( this.c[this.moveCycle[this.moveCycleCounter]] )
+		{
+			Rect( this.x,this.y,this.w,this.h,this.c[this.moveCycle[this.moveCycleCounter]] );
+		}
+		else
+		{
+			Rect( this.x,this.y,this.w,this.h,this.c[this.moveCycle[0]] );
+		}
 	}
-	Fall()
+	UpdateColor()
 	{
-		
+		/*
+		if( this.moveCycle[this.moveCycleCounter] === 0 )
+		{
+			this.c = "#666666";
+		}
+		else if( this.moveCycle[this.moveCycleCounter] === 1 )
+		{
+			this.c = "#775544";
+		}
+		else if( this.moveCycle[this.moveCycleCounter] === 2 )
+		{
+			this.c = "#884433";
+		}
+		else if( this.moveCycle[this.moveCycleCounter] === 3 )
+		{
+			this.c = "#993322";
+		}
+		*/
 	}
 	GetActive()
 	{

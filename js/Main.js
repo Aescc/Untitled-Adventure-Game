@@ -1,32 +1,20 @@
 const canvas = document.getElementById("gc");
 const context = canvas.getContext("2d");
 
+var playerMoveCounter = 0;
+const playerMoveCounterMax = 5;
+var clickNum = 0;
+
 var keyMap = [];
+var uncoveredTiles = [ 0,0 ];
 
 var mouse = { x: 0,y: 0 }
 
 var player = new Player();
-var playerMoveCounter = 0;
-const playerMoveCounterMax = 5;
 
 var tileMap = new TileMap();
-var lamps = [
-	new Lamp( 2 * 80,4 * 80,1 )
-];
 
-var enemies = [
-	new Enemy( 4 * 80,3 * 80,[3,3,3,1,1,2,2,2,2,0,0,3] )
-];
-var fallingFloors = [
-	new FallingFloor( 4 * 80,4 * 80,80,80 ),
-	new FallingFloor( 5 * 80,4 * 80,80,80 ),
-	new FallingFloor( 6 * 80,4 * 80,80,80 )
-];
-var spikes = [
-	new Spike( 4 * 80,4 * 80 ),
-	new Spike( 5 * 80,4 * 80 ),
-	new Spike( 6 * 80,4 * 80 )
-];
+var isStarted = false;
 
 window.onload = function()
 {
@@ -55,6 +43,7 @@ window.onload = function()
 function CheckClick()
 {
 	// When you click, this happens.
+	++clickNum;
 }
 
 function CheckMousePos( e )
@@ -75,96 +64,129 @@ function Init()
 
 function Update()
 {
-	// Update things here
-	if( player.BindToScreen() === 1 )
+	if( clickNum > 2 )
 	{
-		tileMap.Transition();
+		isStarted = true;
 	}
-	player.Move( player.BindToScreen(),player.speed ); // Must come BEFORE tileMap check.
-	
-	if( !tileMap.GetLoc( player.x,player.y ) )
+	if( isStarted )
 	{
-		// player.speed = 0;
-		player.SetDead( true );
-	}
-	tileMap.Update( player );
-	/*
-	for( var i = 0; i < fallingFloors.length; ++i )
-	{
-		fallingFloors[i].Update();
-		if( player.GetX( true ) === fallingFloors[i].GetX() && player.GetY( true ) === fallingFloors[i].GetY() )
+		// Update things here
+		if( player.BindToScreen() === 1 )
 		{
-			for( var j = 0; j < fallingFloors.length; ++j )
-			{
-				fallingFloors[j].Fall();
-			}
-			if( fallingFloors[i].GetFalling() )
-			{
-				player.SetDead( true );
-			}
+			tileMap.Transition();
 		}
-	}
-	*/
-	if( playerMoveCounter > playerMoveCounterMax )
-	{
-		if( !player.GetDead() )
+		player.Move( player.BindToScreen(),player.speed ); // Must come BEFORE tileMap check.
+		
+		if( !tileMap.GetLoc( player.x,player.y ) )
 		{
-			if( keyMap[87] )
+			// player.speed = 0;
+			player.SetDead( true );
+		}
+		tileMap.Update( player );
+		if( playerMoveCounter > playerMoveCounterMax )
+		{
+			if( !player.GetDead() )
 			{
-				// W
-				player.Move( 0,player.speed );
-				playerMoveCounter = 0;
+				if( keyMap[87] || keyMap[38] )
+				{
+					// W
+					player.Move( 0,player.speed );
+					playerMoveCounter = 0;
+				}
+				else if( keyMap[83] || keyMap[40] )
+				{
+					// S
+					player.Move( 1,player.speed );
+					playerMoveCounter = 0;
+				}
+				else if( keyMap[65] || keyMap[37] )
+				{
+					// A
+					player.Move( 2,player.speed );
+					playerMoveCounter = 0;
+				}
+				else if( keyMap[68] || keyMap[39] )
+				{
+					// D
+					player.Move( 3,player.speed );
+					playerMoveCounter = 0;
+				}
 			}
-			else if( keyMap[83] )
+			else
 			{
-				// S
-				player.Move( 1,player.speed );
-				playerMoveCounter = 0;
-			}
-			else if( keyMap[65] )
-			{
-				// A
-				player.Move( 2,player.speed );
-				playerMoveCounter = 0;
-			}
-			else if( keyMap[68] )
-			{
-				// D
-				player.Move( 3,player.speed );
-				playerMoveCounter = 0;
+				player.Respawn();
 			}
 		}
 		else
 		{
-			player.Respawn();
+			++playerMoveCounter;
 		}
 	}
 	else
 	{
-		++playerMoveCounter;
+		var tempX = mouse.x;
+		var tempY = mouse.y;
+		while( tempX % 80 !== 0 )
+		{
+			--tempX;
+		}
+		while( tempY % 80 !== 0 )
+		{
+			--tempY;
+		}
+		uncoveredTiles[0] = tempX / 80;
+		uncoveredTiles[1] = tempY / 80;
 	}
 }
 
 function Draw()
 {
-	// Draw things here
-	Rect( 0,0,canvas.width,canvas.height,"#000" );
-	tileMap.Draw();
-	for( var i = 0; i < spikes.length; ++i )
+	if( isStarted )
 	{
-		// spikes[i].Draw();
+		// Draw things here
+		Rect( 0,0,canvas.width,canvas.height,"#000" );
+		tileMap.Draw();
+		player.Draw();
+		if( keyMap[17] )
+		{
+			tileMap.CheckMouseData( mouse.x,mouse.y );
+		}
 	}
-	fallingFloors.forEach( function( tile )
+	else
 	{
-		// tile.Draw();
-	});
-	player.Draw();
-	for( var i = 0; i < lamps.length; ++i )
-	{
-		// lamps[i].Draw();
-	}
-	if( keyMap[17] )
-	{
-		tileMap.CheckMouseData( mouse.x,mouse.y );
+		Rect( 0,0,canvas.width,canvas.height,"#000" );
+		Text( 0,150,"CLICK","#FFF","200PX Arial" );
+		Text( 0,300,"THE",  "#FFF","200PX Arial" );
+		Text( 0,450,"MOUSE","#FFF","200PX Arial" );
+		Text( 0,600,"THREE","#FFF","200PX Arial" );
+		Text( 0,750,"TIMES","#FFF","200PX Arial" );
+		for( var i = 0; i < canvas.height / 80; ++i )
+		{
+			for( var j = 0; j < canvas.width / 80; ++j )
+			{
+				if( j === uncoveredTiles[0] && i === uncoveredTiles[1] )
+				{
+					Rect( j * 80,i * 80,80,80,"#FFAA00",0.5 );
+				}
+				else if( ( j === uncoveredTiles[0] + 1 && i === uncoveredTiles[1] ) ||
+						 ( j === uncoveredTiles[0] - 1 && i === uncoveredTiles[1] ) ||
+						 ( j === uncoveredTiles[0] && i === uncoveredTiles[1] + 1 ) ||
+						 ( j === uncoveredTiles[0] && i === uncoveredTiles[1] - 1 ) )
+				{
+					Rect( j * 80,i * 80,80,80,"#FFAA00",0.3 );
+				}
+				else if( ( j === uncoveredTiles[0] + 1 && i === uncoveredTiles[1] + 1 ) ||
+						 ( j === uncoveredTiles[0] - 1 && i === uncoveredTiles[1] + 1 ) ||
+						 ( j === uncoveredTiles[0] + 1 && i === uncoveredTiles[1] - 1 ) ||
+						 ( j === uncoveredTiles[0] - 1 && i === uncoveredTiles[1] - 1 ) )
+				{
+					Rect( j * 80,i * 80,80,80,"#FFAA00",0.1 );
+				}
+				else
+				{
+					Rect( j * 80,i * 80,80,80,"#000",1.0 );
+				}
+			}
+		}
 	}
 }

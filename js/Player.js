@@ -6,7 +6,11 @@ class Player
 		this.y = canvas.height - 80 * 1;
 		this.w = 80;
 		this.h = 80;
-		this.c = "#DD3322";
+		this.R = "DD";
+		this.G = 22;
+		this.B = 22;
+		this.c = "#" + this.R + this.G + this.B;
+		this.cAdd = 1;
 		this.speed = this.w;
 		this.drawX = this.x;
 		this.drawY = this.y;
@@ -63,6 +67,21 @@ class Player
 	}
 	Draw()
 	{
+		if( Random( 0,1 ) )
+		{
+			if( Random( 0,10 ) )
+			{
+				this.G += this.cAdd;
+				this.B += this.cAdd;
+			}
+		}
+		if( this.G < 11 || this.B < 11 || this.G > 33 || this.B > 33 )
+		{
+			this.cAdd *= -1;
+			this.G += this.cAdd;
+			this.B += this.cAdd;
+		}
+		this.c = "#" + this.R + this.G + this.B;
 		Rect( this.drawX,this.drawY,this.w,this.h,this.c );
 		
 		// this.img.src = "images/player/" + this.moveDir + ".png";
