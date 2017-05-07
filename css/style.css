@@ -1,4 +1,50 @@
+a
+{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size:   30PX;
+	color:       #FFF;
+}
+
 body
 {
-	background-color: #333333;
+	background-color: #333;
+	overflow: HIDDEN;
+	margin: 0;
+}
+
+p
+{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size:   40PX;
+	color:       #FFF;
+}
+
+.box
+{
+	background:    #333;
+	border-radius: 10PX;
+	border:        4PX SOLID #FF0;
+	padding:       20PX;
+	margin:        20PX;
+}
+
+.canvas-box
+{
+	float: LEFT;
+}
+
+.navbar
+{
+	float: TOP;
+}
+
+.spacer
+{
+	
+}
+
+.box:hover,a:hover
+{
+	background:   #777;
+	border-color: #BB0;
 }
