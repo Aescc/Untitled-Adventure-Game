@@ -8,7 +8,7 @@ var clickNum = 0;
 var keyMap = [];
 var uncoveredTiles = [ 0,0 ];
 
-var mouse = { x: 0,y: 0 }
+var mouse = { x: canvas.width,y: canvas.height }
 
 var player = new Player();
 
