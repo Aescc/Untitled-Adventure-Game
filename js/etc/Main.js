@@ -155,11 +155,13 @@ function Draw()
 	else
 	{
 		Rect( 0,0,canvas.width,canvas.height,"#000" );
+		/*
 		Text( 0,150,"CLICK","#FFF","200PX Arial" );
 		Text( 0,300,"THE",  "#FFF","200PX Arial" );
 		Text( 0,450,"MOUSE","#FFF","200PX Arial" );
 		Text( 0,600,"THREE","#FFF","200PX Arial" );
 		Text( 0,750,"TIMES","#FFF","200PX Arial" );
+		*/
 		for( var i = 0; i < canvas.height / 80; ++i )
 		{
 			for( var j = 0; j < canvas.width / 80; ++j )
