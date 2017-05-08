@@ -15,9 +15,11 @@
 	<div class="box sidebar">
 		<a href="#player">Player</a>
 		<br>
+		<a href="#falling_floor">Falling Floor</a>
+		<br>
 		<a href="#ghost">Ghost</a>
 		<br>
-		<a href="#hot_tile">Hot Tiles</a>
+		<a href="#hot_tile">Hot Tile</a>
 		<br>
 		<a href="#puzzles">Puzzles</a>
 	</div>
@@ -30,6 +32,22 @@
 		<div class="box inner-content">
 			<h2>Information:</h2>
 			<p>You!  Appears as a flashing red square on the game screen.  Can be moved with W-A-S-D keys, in addition to the arrow keys.</p>
+		</div>
+	</div>
+	
+	<div class="box content" id="falling_floor">
+		<h1>Falling Floor</h1>
+		<div class="box image">
+			<img src="../images/player.png">
+		</div>
+		<div class="box inner-content">
+			<h2>Information:</h2>
+			<p>Falling floors react to the player's touch.  Upon standing on a falling floor, all other falling floors will start to break.
+			This is visible by the darkening of their color.  Once they are sufficiently broken, they will fall away, killing the player if
+			standing on top of one.</p>
+			<h2>Tips</h2>
+			<p>While falling floors are typically the same color as standard flooring, they are always the same shade as each other.  Try
+			to find groups of them by looking for tiles with exactly the same colors.</p>
 		</div>
 	</div>
 	
@@ -49,6 +67,9 @@
 	
 	<div class="box content" id="hot_tile">
 		<h1>Hot Tile</h1>
+		<div class="box image">
+			<img src="../images/ghost.png">
+		</div>
 		<div class="box inner-content">
 			<h2>Information:</h2>
 			<p>A hot tile looks similar to normal ground, but quickly heats up.  At it's apex, it will destroy the player!  Take care to not stand on it when it is hot,
