@@ -1,6 +1,6 @@
 class FallingFloor
 {
-	constructor( x,y,w,h )
+	constructor( x,y,w = 80,h = 80 )
 	{
 		this.x = x;
 		this.y = y;

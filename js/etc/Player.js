@@ -109,6 +109,7 @@ class Player
 	}
 	Respawn()
 	{
+		tileMap.Transition( tileMap.GetCurrentLevel() );
 		this.speed = 0;
 		this.w -= 2;
 		this.h -= 2;

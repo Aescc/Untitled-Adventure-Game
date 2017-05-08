@@ -1,6 +1,6 @@
 class Enemy
 {
-	constructor( x,y,moveCycle )
+	constructor( x,y,moveCycle,spd = 5 )
 	{
 		this.x = x;
 		this.y = y;
@@ -8,7 +8,7 @@ class Enemy
 		this.h = 80;
 		this.c = "#" + Random( 11,99 ) + "DD" + Random( 11,99 );
 		this.moveCounter = 0;
-		this.moveCounterMax = 5; // speed, lower is faster
+		this.moveCounterMax = spd; // speed, lower is faster
 		this.moveCycle = moveCycle;
 		this.moveCycleCounter = 0;
 		this.slime = { x:this.x,y:this.y };

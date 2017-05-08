@@ -1,22 +1,33 @@
 a
 {
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	font-size:   30PX;
-	color:       #FFF;
 }
 
 body
 {
 	background-color: #333;
-	overflow: HIDDEN;
 	margin: 0;
+}
+
+a,h1,h2,p
+{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	color:       #FFF;
+}
+
+h1
+{
+	font-size: 40PX;
+}
+
+img
+{
+	width: 100%;
 }
 
 p
 {
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	font-size:   40PX;
-	color:       #FFF;
+	font-size: 20PX;
 }
 
 .box
@@ -33,18 +44,38 @@ p
 	float: LEFT;
 }
 
+.content
+{
+	float: RIGHT;
+	width: 80%;
+}
+
+.image
+{
+	float: LEFT;
+	width: 25%;
+}
+
+.inner-content
+{
+	float: RIGHT;
+	width: 60%;
+}
+
 .navbar
 {
 	float: TOP;
 }
 
-.spacer
+.sidebar
 {
-	
+	float:        LEFT;
+	margin-right: 5PX;
+	width:        10%;
 }
 
 .box:hover,a:hover
 {
-	background:   #777;
+	background:   #555;
 	border-color: #BB0;
 }
