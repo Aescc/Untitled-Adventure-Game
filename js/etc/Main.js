@@ -126,16 +126,16 @@ function Update()
 	{
 		var tempX = mouse.x;
 		var tempY = mouse.y;
+		/*
 		while( tempX % 80 !== 0 )
 		{
 			--tempX;
-			console.log( tempX );
 		}
 		while( tempY % 80 !== 0 )
 		{
 			--tempY;
-			console.log( tempY );
 		}
+		*/
 		uncoveredTiles[0] = tempX / 80;
 		uncoveredTiles[1] = tempY / 80;
 	}
