@@ -5,49 +5,71 @@
 </head>
 <body>
 	<div class="box navbar">
-		<a href="../index.html">Game</a>
+		<a href="../index.html" class="topbar">Game</a>
 		&nbsp &nbsp
-		<a href="Readme.html">Readme</a>
+		<a href="Readme.html" class="topbar">Readme</a>
 		&nbsp &nbsp
-		<a href="Manual.html">Manual</a>
+		<a href="Manual.html" class="topbar">Manual</a>
 	</div>
 	
 	<div class="box sidebar">
-		<a href="#player">Player</a>
-		<br>
-		<a href="#falling_floor">Falling Floor</a>
-		<br>
-		<a href="#ghost">Ghost</a>
-		<br>
-		<a href="#hot_tile">Hot Tile</a>
-		<br>
-		<a href="#puzzles">Puzzles</a>
+		<h3>Dangers of the Abyss</h3>
+		<ul>
+			<li><a href="#the_abyss">The Abyss</a></li>
+			<li><a href="#falling_floor">Falling Floor</a></li>
+			<li><a href="#flame_thrower">Flame Thrower</a></li>
+			<li><a href="#ghost">Ghost</a></li>
+			<li><a href="#hot_tile">Hot Tile</a></li>
+		</ul>
+		<h3>Miscellaneous</h3>
+		<ul>
+			<li><a href="#player">Player</a></li>
+			<li><a href="#puzzles">Puzzles</a></li>
+		</ul>
 	</div>
 	
-	<div class="box content" id="player">
-		<h1>Player</h1>
+	<div class="box content" id="the_abyss">
+		<h1>The Abyss</h1>
 		<div class="box image">
-			<img src="../images/player.png">
+			<img src="../images/the_abyss.png">
 		</div>
-		<div class="box inner-content">
+		<div clas="box inner-content">
 			<h2>Information:</h2>
-			<p>You!  Appears as a flashing red square on the game screen.  Can be moved with W-A-S-D keys, in addition to the arrow keys.</p>
+			<p>The abyss is the dark multicolored area below the floor, showing colors ranging from dark blues to lighter ones.
+			It's a long way down, so don't fall!</p>
+			<h2>Tips:</h2>
+			<p>Sometimes, the abyss will be dark gray and next to a floor.  Don't be fooled, you will still fall!  To avoid this, try to make
+			sure the path you are taking is logical.</p>
 		</div>
 	</div>
 	
 	<div class="box content" id="falling_floor">
 		<h1>Falling Floor</h1>
 		<div class="box image">
-			<img src="../images/player.png">
+			<img src="../images/falling_floor.png">
 		</div>
 		<div class="box inner-content">
 			<h2>Information:</h2>
 			<p>Falling floors react to the player's touch.  Upon standing on a falling floor, all other falling floors will start to break.
 			This is visible by the darkening of their color.  Once they are sufficiently broken, they will fall away, killing the player if
 			standing on top of one.</p>
-			<h2>Tips</h2>
+			<h2>Tips:</h2>
 			<p>While falling floors are typically the same color as standard flooring, they are always the same shade as each other.  Try
 			to find groups of them by looking for tiles with exactly the same colors.</p>
+		</div>
+	</div>
+	
+	<div class="box content" id="flame_thrower">
+		<h1>Flame Thrower</h1>
+		<div class="box image">
+			<img src="../images/flame_thrower.png">
+		</div>
+		<div class="box inner-content">
+			<h2>Information:</h2>
+			<p>Flame Throwers are dangerous creations found in the game.  They expel fireballs at a standard interval.  While their projectiles
+			are deadly to the touch, they are also, so beware!</p>
+			<h2>Tips:</h2>
+			<p>Flame Throwers always fire at a standard interval.  Use this to your advantage in making your way past them.</p>
 		</div>
 	</div>
 	
@@ -68,21 +90,32 @@
 	<div class="box content" id="hot_tile">
 		<h1>Hot Tile</h1>
 		<div class="box image">
-			<img src="../images/ghost.png">
+			<img src="../images/hot_tile.png">
 		</div>
 		<div class="box inner-content">
 			<h2>Information:</h2>
 			<p>A hot tile looks similar to normal ground, but quickly heats up.  At it's apex, it will destroy the player!  Take care to not stand on it when it is hot,
 			which is when it turns red almost like the player.  Hot tiles are typically found in groups, emulating a pattern.</p>
-			<h2>Tips</h2>
+			<h2>Tips:</h2>
 			<p>Try to study the tiles' pattern first before travelling over them.  This way, you can plot your route and try not to get burned.</p>
+		</div>
+	</div>
+	
+	<div class="box content" id="player">
+		<h1>Player</h1>
+		<div class="box image">
+			<img src="../images/player.png">
+		</div>
+		<div class="box inner-content">
+			<h2>Information:</h2>
+			<p>You!  Appears as a flashing red square on the game screen.  Can be moved with W-A-S-D keys, in addition to the arrow keys.</p>
 		</div>
 	</div>
 	
 	<div class="box content" id="puzzles">
 		<h1>Puzzles</h1>
 		<div class="box image">
-			<img src="../images/ghost.png">
+			<img src="../images/puzzles.png">
 		</div>
 		<div class="box inner-content">
 			<h2>Information:</h2>

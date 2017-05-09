@@ -1,6 +1,6 @@
 a
 {
-	font-size:   30PX;
+	font-size:   20PX;
 }
 
 body
@@ -9,7 +9,7 @@ body
 	margin: 0;
 }
 
-a,h1,h2,p
+a,h1,h2,h3,p
 {
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	color:       #FFF;
@@ -20,9 +20,19 @@ h1
 	font-size: 40PX;
 }
 
+h3
+{
+	font-size: 25PX;
+}
+
 img
 {
 	width: 100%;
+}
+
+li
+{
+	color: #FFF;
 }
 
 p
@@ -47,19 +57,19 @@ p
 .content
 {
 	float: RIGHT;
-	width: 80%;
+	width: 70%;
 }
 
 .image
 {
 	float: LEFT;
-	width: 25%;
+	width: 20%;
 }
 
 .inner-content
 {
 	float: RIGHT;
-	width: 60%;
+	width: 55%;
 }
 
 .navbar
@@ -71,7 +81,12 @@ p
 {
 	float:        LEFT;
 	margin-right: 5PX;
-	width:        10%;
+	width:        15%;
+}
+
+.topbar
+{
+	font-size: 30PX;
 }
 
 .box:hover,a:hover
