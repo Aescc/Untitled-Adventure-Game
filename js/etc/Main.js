@@ -124,9 +124,8 @@ function Update()
 	}
 	else
 	{
-		var tempX = mouse.x;
-		var tempY = mouse.y;
-		/*
+		var tempX = Math.floor( mouse.x );
+		var tempY = Math.floor( mouse.y );
 		while( tempX % 80 !== 0 )
 		{
 			--tempX;
@@ -135,10 +134,8 @@ function Update()
 		{
 			--tempY;
 		}
-		*/
 		uncoveredTiles[0] = tempX / 80;
 		uncoveredTiles[1] = tempY / 80;
-		console.log( "x: " + uncoveredTiles[0] + " y: " + uncoveredTiles[1] );
 	}
 }
 
