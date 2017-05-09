@@ -184,54 +184,6 @@ class TileMap
 				[ 0,0,0,0,1,1,1,0,0,0 ],
 				[ 0,0,0,0,1,1,1,0,0,0 ],
 				[ 0,0,0,0,1,1,1,0,0,0 ]
-			],
-			[
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,0,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,0,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,0,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ]
-			],
-			[
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,1,1,1,1,1,0,0 ],
-				[ 0,0,0,1,1,1,1,1,0,0 ],
-				[ 0,0,0,1,1,1,1,1,0,0 ],
-				[ 0,0,0,1,1,1,1,1,0,0 ],
-				[ 0,0,0,1,1,1,1,1,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ]
-			],
-			[
-				[ 0,0,0,1,1,1,1,1,0,0 ],
-				[ 0,0,0,1,1,1,1,1,0,0 ],
-				[ 0,0,0,1,1,1,1,1,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ]
-			],
-			[
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ],
-				[ 0,0,0,0,1,1,1,0,0,0 ]
 			]
 		];
 		this.enemies = [
@@ -267,14 +219,6 @@ class TileMap
 			],
 			[],
 			[],
-			[],
-			[
-				new Enemy( 4 * 80,1 * 80,[ 3,3,1,1,2,2,1,1,3,3,1,1,2,2,0,0,3,3,0,0,2,2,0,0 ] )
-			],
-			[
-				new Enemy( 3 * 80,2 * 80,[ 1,1,1,1,0,0,0,0 ] ),
-				new Enemy( 7 * 80,6 * 80,[ 0,0,0,0,1,1,1,1 ] ),
-			],
 			[]
 		];
 		this.fallingFloors = [
@@ -352,9 +296,6 @@ class TileMap
 				new FallingFloor( 5 * 80,3 * 80 ),
 				new FallingFloor( 6 * 80,3 * 80 ),
 			],
-			[],
-			[],
-			[],
 			[]
 		];
 		this.flameThrowers = [
@@ -386,14 +327,7 @@ class TileMap
 			[],
 			[],
 			[],
-			[],
-			[],
-			[],
-			[
-				new FlameThrower( 4 * 80,0 * 80,60,1 ),
-				new FlameThrower( 5 * 80,0 * 80,70,1 ),
-				new FlameThrower( 6 * 80,0 * 80,80,1 )
-			]
+			[]
 		];
 		this.spikes = [
 			[],
@@ -499,26 +433,7 @@ class TileMap
 				new Spike( 6 * 80,3 * 80,0 ),
 				new Spike( 6 * 80,2 * 80,0 ),
 				new Spike( 6 * 80,1 * 80,0 )
-			],
-			[],
-			[
-				new Spike( 4 * 80,2 * 80,12 ),
-				new Spike( 5 * 80,2 * 80,12 ),
-				new Spike( 6 * 80,2 * 80,12 ),
-				new Spike( 4 * 80,3 * 80, 9 ),
-				new Spike( 5 * 80,3 * 80, 9 ),
-				new Spike( 6 * 80,3 * 80, 9 ),
-				new Spike( 4 * 80,4 * 80, 6 ),
-				new Spike( 5 * 80,4 * 80, 6 ),
-				new Spike( 6 * 80,4 * 80, 6 ),
-				new Spike( 4 * 80,5 * 80, 3 ),
-				new Spike( 5 * 80,5 * 80, 3 ),
-				new Spike( 6 * 80,5 * 80, 3 ),
-				new Spike( 4 * 80,6 * 80, 0 ),
-				new Spike( 5 * 80,6 * 80, 0 ),
-				new Spike( 6 * 80,6 * 80, 0 )
-			],
-			[]
+			]
 		];
 		this.currentMap = -1;
 		this.colors = [
@@ -550,7 +465,7 @@ class TileMap
 						const randColor = "#" + Random( 11,22 ) + Random( 11,22 ) + Random( 22,44 );
 						this.colors[j][i] = randColor;
 					}
-					else if( this.maps[this.currentMap][j][i] === 1)
+					else
 					{
 						// this.colors[j][i] = "#DDCCBB"
 						const randColor = "#" + Random( 11,22 ) + Random( 11,22 ) + Random( 22,44 );
@@ -579,63 +494,10 @@ class TileMap
 	}
 	Update( player )
 	{
-		for( var i = 0; i < this.enemies[this.currentMap].length; ++i )
-		{
-			this.enemies[this.currentMap][i].UpdateAI();
-			if( player.GetX( true ) === this.enemies[this.currentMap][i].GetX() &&
-				player.GetY( true ) === this.enemies[this.currentMap][i].GetY() )
-			{
-				player.SetDead( true );
-			}
-			else if( player.GetX( true ) === this.enemies[this.currentMap][i].GetSlimeX() &&
-				player.GetY( true ) === this.enemies[this.currentMap][i].GetSlimeY() )
-			{
-				player.SetDead( true );
-			}
-		}
-		//
-		for( var i = 0; i < this.flameThrowers[this.currentMap].length; ++i )
-		{
-			this.flameThrowers[this.currentMap][i].Update();
-			if( player.GetX( true ) === this.flameThrowers[this.currentMap][i].GetFireballX() &&
-				player.GetY( true ) === this.flameThrowers[this.currentMap][i].GetFireballY() )
-			{
-				player.SetDead( true );
-			}
-			if( player.GetX( true ) === this.flameThrowers[this.currentMap][i].GetX() &&
-				player.GetY( true ) === this.flameThrowers[this.currentMap][i].GetY() )
-			{
-				player.SetDead( true );
-			}
-		}
-		//
-		for( var i = 0; i < this.fallingFloors[this.currentMap].length; ++i )
-		{
-			this.fallingFloors[this.currentMap][i].Update();
-			if( player.GetX( true ) === this.fallingFloors[this.currentMap][i].GetX() &&
-				player.GetY( true ) === this.fallingFloors[this.currentMap][i].GetY() )
-			{
-				for( var j = 0; j < this.fallingFloors[this.currentMap].length; ++j )
-				{
-					this.fallingFloors[this.currentMap][j].Fall();
-				}
-				if( this.fallingFloors[this.currentMap][i].GetFalling() )
-				{
-					player.SetDead( true );
-				}
-			}
-		}
-		//
-		for( var i = 0; i < this.spikes[this.currentMap].length; ++i )
-		{
-			this.spikes[this.currentMap][i].Update();
-			if( player.GetX( true ) === this.spikes[this.currentMap][i].GetX() &&
-			player.GetY( true ) === this.spikes[this.currentMap][i].GetY() &&
-			this.spikes[this.currentMap][i].GetActive() )
-			{
-				player.SetDead( true );
-			}
-		}
+		this.UpdateEnemies( player );
+		this.UpdateFlameThrowers( player );
+		this.UpdateFallingFloors( player );
+		this.UpdateSpikes( player );
 	}
 	Draw()
 	{
@@ -655,25 +517,11 @@ class TileMap
 				Rect( j * 80,i * 80,80,80,this.FindColor( this.maps[this.currentMap][i][j],j,i ) );
 			}
 		}
-		//
-		for( var i = 0; i < this.fallingFloors[this.currentMap].length; ++i )
-		{
-			this.fallingFloors[this.currentMap][i].Draw();
-		}
-		for( var i = 0; i < this.flameThrowers[this.currentMap].length; ++i )
-		{
-			this.flameThrowers[this.currentMap][i].Draw();
-		}
-		for( var i = 0; i < this.enemies[this.currentMap].length; ++i )
-		{
-			this.enemies[this.currentMap][i].Draw();
-		}
-		for( var i = 0; i < this.spikes[this.currentMap].length; ++i )
-		{
-			this.spikes[this.currentMap][i].Draw();
-		}
-		//
-		this.transitionAlpha -= 0.02;
+		this.DrawFallingFloors();
+		this.DrawFlameThrowers();
+		this.DrawEnemies();
+		this.DrawSpikes();
+		this.transitionAlpha -= 0.01;
 		if( this.transitionAlpha < 0.0 )
 		{
 			this.transitionAlpha = 0.0;
@@ -758,5 +606,99 @@ class TileMap
 	GetCurrentLevel()
 	{
 		return this.currentMap;
+	}
+	UpdateEnemies( player )
+	{
+		for( var i = 0; i < this.enemies[this.currentMap].length; ++i )
+		{
+			this.enemies[this.currentMap][i].UpdateAI();
+			if( player.GetX( true ) === this.enemies[this.currentMap][i].GetX() &&
+				player.GetY( true ) === this.enemies[this.currentMap][i].GetY() )
+			{
+				player.SetDead( true );
+			}
+			else if( player.GetX( true ) === this.enemies[this.currentMap][i].GetSlimeX() &&
+				player.GetY( true ) === this.enemies[this.currentMap][i].GetSlimeY() )
+			{
+				player.SetDead( true );
+			}
+		}
+	}
+	UpdateFallingFloors( player )
+	{
+		for( var i = 0; i < this.fallingFloors[this.currentMap].length; ++i )
+		{
+			this.fallingFloors[this.currentMap][i].Update();
+			if( player.GetX( true ) === this.fallingFloors[this.currentMap][i].GetX() &&
+				player.GetY( true ) === this.fallingFloors[this.currentMap][i].GetY() )
+			{
+				for( var j = 0; j < this.fallingFloors[this.currentMap].length; ++j )
+				{
+					this.fallingFloors[this.currentMap][j].Fall();
+				}
+				if( this.fallingFloors[this.currentMap][i].GetFalling() )
+				{
+					player.SetDead( true );
+				}
+			}
+		}
+	}
+	UpdateFlameThrowers( player )
+	{
+		for( var i = 0; i < this.flameThrowers[this.currentMap].length; ++i )
+		{
+			this.flameThrowers[this.currentMap][i].Update();
+			if( player.GetX( true ) === this.flameThrowers[this.currentMap][i].GetFireballX() &&
+				player.GetY( true ) === this.flameThrowers[this.currentMap][i].GetFireballY() )
+			{
+				player.SetDead( true );
+			}
+			if( player.GetX( true ) === this.flameThrowers[this.currentMap][i].GetX() &&
+				player.GetY( true ) === this.flameThrowers[this.currentMap][i].GetY() )
+			{
+				player.SetDead( true );
+			}
+		}
+	}
+	UpdateSpikes( player )
+	{
+		for( var i = 0; i < this.spikes[this.currentMap].length; ++i )
+		{
+			this.spikes[this.currentMap][i].Update();
+			if( player.GetX( true ) === this.spikes[this.currentMap][i].GetX() &&
+			player.GetY( true ) === this.spikes[this.currentMap][i].GetY() &&
+			this.spikes[this.currentMap][i].GetActive() )
+			{
+				player.SetDead( true );
+			}
+		}
+	}
+	DrawEnemies()
+	{
+		for( var i = 0; i < this.enemies[this.currentMap].length; ++i )
+		{
+			this.enemies[this.currentMap][i].Draw();
+		}
+	}
+	DrawFallingFloors()
+	{
+		for( var i = 0; i < this.fallingFloors[this.currentMap].length; ++i )
+		{
+			this.fallingFloors[this.currentMap][i].Draw();
+		}
+	}
+	DrawSpikes()
+	{
+		for( var i = 0; i < this.spikes[this.currentMap].length; ++i )
+		{
+			this.spikes[this.currentMap][i].Draw();
+		}
+	}
+	DrawFlameThrowers()
+	{
+		for( var i = 0; i < this.flameThrowers[this.currentMap].length; ++i )
+		{
+			this.flameThrowers[this.currentMap][i].Draw();
+		}
 	}
 }
