@@ -138,6 +138,7 @@ function Update()
 		*/
 		uncoveredTiles[0] = tempX / 80;
 		uncoveredTiles[1] = tempY / 80;
+		console.log( "x: " + uncoveredTiles[0] + " y: " + uncoveredTiles[1] );
 	}
 }
 
