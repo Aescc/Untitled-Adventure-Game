@@ -5,6 +5,7 @@ class TileMap
 		this.x = 0;
 		this.y = 0;
 		this.maps = [
+			// Scene 0!
 			[
 				[ 0,0,0,0,1,1,1,0,0,0 ],
 				[ 0,0,0,0,1,1,1,0,0,0 ],
@@ -256,9 +257,59 @@ class TileMap
 				[ 0,1,1,1,1,1,1,1,1,0 ],
 				[ 0,1,1,1,1,1,1,1,1,0 ],
 				[ 0,1,1,1,1,1,1,1,1,0 ]
+			],
+			// Scene 1!
+			[
+				[ 0,0,0,0,0,0,0,0,0,2 ],
+				[ 0,0,2,2,2,2,2,2,2,2 ],
+				[ 0,2,2,0,0,0,0,0,0,2 ],
+				[ 0,2,0,0,0,0,0,0,0,2 ],
+				[ 0,2,0,0,0,0,0,0,0,2 ],
+				[ 0,2,2,2,2,2,2,2,2,2 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ]
+			],
+			[
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,0,2,0,0,0 ],
+				[ 0,0,0,0,2,0,2,0,0,0 ],
+				[ 0,0,0,0,2,0,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,0,2,0,0,0 ],
+				[ 0,0,0,0,2,0,2,0,0,0 ],
+				[ 0,0,0,0,2,0,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ]
+			],
+			[
+				[ 0,0,0,0,2,0,0,0,0,0 ],
+				[ 0,0,0,0,2,0,0,0,0,0 ],
+				[ 0,0,0,0,2,2,2,2,2,2 ],
+				[ 0,0,0,0,0,0,0,2,0,0 ],
+				[ 0,2,2,2,2,2,0,2,0,0 ],
+				[ 0,0,0,2,0,2,2,2,0,0 ],
+				[ 0,0,0,2,0,0,0,0,0,0 ],
+				[ 0,0,0,2,2,2,2,2,0,0 ],
+				[ 0,0,0,0,0,2,0,0,0,0 ],
+				[ 0,0,0,0,0,2,0,0,0,0 ]
+			],
+			[
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ]
 			]
 		];
 		this.enemies = [
+			// Scene 0!
 			[
 				new Enemy( 4 * 80,3 * 80,[ 3,3,3,1,1,2,2,2,2,0,0,3 ] ),
 				new Enemy( 6 * 80,5 * 80,[ 2,2,2,0,0,3,3,3,3,1,1,2 ] )
@@ -304,7 +355,25 @@ class TileMap
 			[],
 			[
 				new Enemy( 4 * 80,3 * 80,[ 3,1,2,0 ] ),
-				new Enemy( 3 * 80,2 * 80,[ 3,3,3,1,1,1,2,2,2,0,0,0 ] )
+				new Enemy( 3 * 80,2 * 80,[ 3,3,3,1,1,1,2,2,2,0,0,0 ] ),
+				new Enemy( 2 * 80,1 * 80,[ 3,3,3,3,3,1,1,1,1,1,2,2,2,2,2,0,0,0,0,0 ] ),
+				new Enemy( 1 * 80,0 * 80,[ 3,3,3,3,3,3,3,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,0,0,0,0,0,0,0,0 ] )
+			],
+			// Sceme 1!
+			[],
+			[
+				new Enemy( 4 * 80,1 * 80,[ 1,1,1,1,1,1,0,0,0,0,0,0 ],undefined,1 ),
+				new Enemy( 6 * 80,7 * 80,[ 0,0,0,0,0,0,1,1,1,1,1,1 ],undefined,1 )
+			],
+			[
+				new Enemy( 7 * 80,7 * 80,[ 2,2,2,2,3,3,3,3 ],undefined,1 ),
+				new Enemy( 1 * 80,4 * 80,[ 3,3,3,3,2,2,2,2 ],undefined,1 ),
+				new Enemy( 9 * 80,2 * 80,[ 2,2,2,2,2,3,3,3,3,3 ],undefined,1 )
+			],
+			[
+				// new enemy
+				// new enemy 2 down
+				// new enemy 4 down from first
 			]
 		];
 		this.fallingFloors = [
@@ -388,9 +457,19 @@ class TileMap
 			[],
 			[],
 			[],
+			[],
+			// Scene 1!
+			[],
+			[
+				new FallingFloor( 5 * 80,4 * 80,undefined,undefined,1 ),
+				new FallingFloor( 4 * 80,4 * 80,undefined,undefined,1 ),
+				new FallingFloor( 6 * 80,4 * 80,undefined,undefined,1 )
+			],
+			[],
 			[]
 		];
 		this.flameThrowers = [
+			// Scene 0!
 			[],
 			[],
 			[],
@@ -438,9 +517,20 @@ class TileMap
 				new FlameThrower( 5 * 80,4 * 80,55,2 ),
 				new FlameThrower( 5 * 80,4 * 80,33,3 )
 			],
+			[],
+			// Scene 1!
+			[
+				new FlameThrower( 3 * 80,3 * 80,30,1 ),
+				new FlameThrower( 2 * 80,6 * 80,45,3 ),
+				new FlameThrower( 7 * 80,7 * 80,30,0 ),
+				new FlameThrower( 8 * 80,6 * 80,45,2 )
+			],
+			[],
+			[],
 			[]
 		];
 		this.spikes = [
+			// Scene 0!
 			[],
 			[
 				new Spike( 4 * 80,7 * 80,0 ),
@@ -566,6 +656,11 @@ class TileMap
 			[],
 			[],
 			[],
+			[],
+			// Scene 1!
+			[],
+			[],
+			[],
 			[]
 		];
 		this.currentMap = -1;
@@ -593,22 +688,22 @@ class TileMap
 			{
 				if( this.maps[this.currentMap][j][i] === 0 )
 				{
-					if( Random( 0,100 ) )
-					{
-						const randColor = "#" + Random( 11,22 ) + Random( 11,22 ) + Random( 22,44 );
-						this.colors[j][i] = randColor;
-					}
-					else if( this.maps[this.currentMap][j][i] === 1)
-					{
-						// this.colors[j][i] = "#DDCCBB"
-						const randColor = "#" + Random( 11,22 ) + Random( 11,22 ) + Random( 22,44 );
-						this.colors[j][i] = randColor;
-					}
+					const randColor = "#" + Random( 11,22 ) + Random( 11,22 ) + Random( 22,44 );
+					this.colors[j][i] = randColor;
 				}
-				else
+				else if( this.maps[this.currentMap][j][i] === 1 )
 				{
 					const randRGB = Random( 33,66 );
 					const randColor = "#" + randRGB + randRGB + randRGB;
+					this.colors[j][i] = randColor;
+				}
+				else if( this.maps[this.currentMap][j][i] === 2 )
+				{
+					// TODO: Fix color generation to be more yellow!
+					const randR = Random( 44,66 );
+					const randG = randR - 15;
+					const randB = Random( 11,22 );
+					const randColor = "#" + randR + randG + randB;
 					this.colors[j][i] = randColor;
 				}
 			}
@@ -736,6 +831,7 @@ class TileMap
 	}
 	FindColor( c,row,col )
 	{
+		/*
 		if( c === 0 )
 		{
 			// return "#000000";
@@ -746,14 +842,33 @@ class TileMap
 			// return "#464646";
 			return this.colors[col][row];
 		}
+		else if( c === 2 )
+		{
+			return this.colors[col][row];
+		}
+		*/
+		return this.colors[col][row];
 	}
-	Transition( nextMap = -50 )
+	Transition( nextMap = -50,sceneNum = 0 )
 	{
 		this.transitionAlpha = 1;
 		if( nextMap === -50 )
 		{
 			// ++this.currentMap;
-			this.currentMap = Random( 0,this.maps.length - 1 );
+			if( sceneNum === 0 )
+			{
+				this.currentMap = Random( 0,20 );
+			}
+			else if( sceneNum === 1 )
+			{
+				// TODO: Finish maps and change this.maps.length - 1 to 41
+				this.currentMap = Random( 21,this.maps.length - 1 );
+			}
+			else if( sceneNum === 2 )
+			{
+				// TODO: Finish maps and change this.maps.length - 1 to 63
+				// this.currentMap = Random( 42,this.maps.length - 1 );
+			}
 		}
 		else
 		{
@@ -787,14 +902,14 @@ class TileMap
 		newX /= 80;
 		newY /= 80;
 		// Text( newX * 80,newY * 80 + 45,this.colors[newY][newX],"#FFFFFF","20PX Arial" );
-		var textVal = "Void";
+		var textVal = "Abyss";
 		if( this.maps[this.currentMap][newY][newX] )
 		{
 			textVal = "Ground";
 		}
 		else
 		{
-			textVal = "Void";
+			textVal = "Abyss";
 		}
 		Text( newX * 80,newY * 80 + 45,textVal,"#FFFFFF","20PX Arial" );
 		// console.log( x + " " + y );

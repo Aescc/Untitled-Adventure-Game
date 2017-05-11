@@ -1,6 +1,6 @@
 class FallingFloor
 {
-	constructor( x,y,w = 80,h = 80 )
+	constructor( x,y,w = 80,h = 80,map = 0 )
 	{
 		this.x = x;
 		this.y = y;
@@ -10,17 +10,10 @@ class FallingFloor
 		this.drawY = this.y;
 		this.drawW = this.w;
 		this.drawH = this.h;
-		this.c0 = "#666666";
 		this.c1 = this.FindBackColor();
 		// this.alpha = 1.0;
-		this.colors = [
-			"#555555",
-			"#444444",
-			"#333333",
-			"#222222",
-			"#111111",
-			"#000000"
-		];
+		this.colors = this.InitColors( map );
+		this.c0 = this.colors[0];
 		this.isFalling = false;
 		this.fallCounter = 0;
 		this.fallCounterMax = 30;
@@ -28,6 +21,43 @@ class FallingFloor
 		this.yStart = this.y;
 		this.wStart = this.w;
 		this.hStart = this.h;
+	}
+	InitColors( map )
+	{
+		if( map === 0 )
+		{
+			return [
+				"#555555",
+				"#444444",
+				"#333333",
+				"#222222",
+				"#111111",
+				"#000000"
+			];
+		}
+		else if( map === 1 )
+		{
+			// TODO: Fix the colors so they match the terrain.
+			return [
+				"#666644",
+				"#555533",
+				"#444422",
+				"#333311",
+				"#222200",
+				"#111100"
+			];
+		}
+		else // if( map === 2 )
+		{
+			return [
+				"#664444",
+				"#553333",
+				"#442222",
+				"#331111",
+				"#220000",
+				"#110000"
+			];
+		}
 	}
 	FindBackColor()
 	{
@@ -50,10 +80,14 @@ class FallingFloor
 				this.drawH = this.hStart;
 				this.drawX = this.x;
 				this.drawY = this.y;
-				this.c0 = "#666666";
+				this.c0 = this.colors[0];
 				this.isFalling = false;
 				// this.alpha = 1.0;
 			}
+		}
+		else
+		{
+			// this.c0 = this.colors[0];
 		}
 	}
 	Draw()

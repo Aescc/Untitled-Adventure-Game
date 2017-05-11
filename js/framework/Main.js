@@ -4,6 +4,8 @@ const context = canvas.getContext("2d");
 var playerMoveCounter = 0;
 const playerMoveCounterMax = 5;
 var clickNum = 0;
+var currentScene = 0;
+var sceneProgress = 0;
 
 var keyMap = [];
 var uncoveredTiles = [ 0,0 ];
@@ -73,7 +75,17 @@ function Update()
 		// Update things here
 		if( player.BindToScreen() === 1 )
 		{
-			tileMap.Transition();
+			tileMap.Transition( undefined,currentScene );
+			++sceneProgress;
+			// TODO: Put a puzzle in between each scene during transition.
+			if( sceneProgress === 30 && currentScene === 0 )
+			{
+				currentScene = 1;
+			}
+			if( sceneProgress === 65 && currentScene === 1 )
+			{
+				currentScene = 2;
+			}
 		}
 		player.Move( player.BindToScreen(),player.speed ); // Must come BEFORE tileMap check.
 		
@@ -149,7 +161,7 @@ function Draw()
 		player.Draw();
 		if( keyMap[17] )
 		{
-			// tileMap.CheckMouseData( mouse.x,mouse.y );
+			tileMap.CheckMouseData( mouse.x,mouse.y );
 		}
 	}
 	else

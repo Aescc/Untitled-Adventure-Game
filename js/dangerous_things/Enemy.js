@@ -1,17 +1,33 @@
 class Enemy
 {
-	constructor( x,y,moveCycle,spd = 5 )
+	constructor( x,y,moveCycle,spd = 5,map = 0 )
 	{
 		this.x = x;
 		this.y = y;
 		this.w = 80;
 		this.h = 80;
-		this.c = "#" + Random( 11,99 ) + "DD" + Random( 11,99 );
+		this.c = this.InitColor( map );
 		this.moveCounter = 0;
 		this.moveCounterMax = spd; // speed, lower is faster
 		this.moveCycle = moveCycle;
 		this.moveCycleCounter = 0;
 		this.slime = { x:this.x,y:this.y };
+	}
+	InitColor( map )
+	{
+		if( map === 0 )
+		{
+			return "#" + Random( 11,99 ) + "DD" + Random( 11,99 );
+		}
+		else if( map === 1 )
+		{
+			const randColor = Random( 0,9 );
+			return "#0" + randColor + "0" + randColor + "0" + randColor;
+		}
+		else if( map === 2 )
+		{
+			return "#" + Random( 11,99 ) + Random( 11,99 ) + "DD";
+		}
 	}
 	UpdateAI()
 	{
