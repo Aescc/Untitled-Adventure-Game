@@ -371,9 +371,9 @@ class TileMap
 				new Enemy( 9 * 80,2 * 80,[ 2,2,2,2,2,3,3,3,3,3 ],undefined,1 )
 			],
 			[
-				// new enemy
-				// new enemy 2 down
-				// new enemy 4 down from first
+				new Enemy( 4 * 80,0 * 80,[ 1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0 ],undefined,1 ),
+				new Enemy( 5 * 80,3 * 80,[ 1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1 ],undefined,1 ),
+				new Enemy( 6 * 80,6 * 80,[ 1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1 ],undefined,1 )
 			]
 		];
 		this.fallingFloors = [
