@@ -10,10 +10,8 @@ var sceneProgress = 0;
 var keyMap = [];
 var uncoveredTiles = [ 0,0 ];
 
-var mouse = { x: canvas.width,y: canvas.height }
-
+var mouse = { x: canvas.width,y: canvas.height };
 var player = new Player();
-
 var tileMap = new TileMap();
 
 var isStarted = false;
@@ -93,6 +91,7 @@ function Update()
 		{
 			// player.speed = 0;
 			player.SetDead( true );
+			tileMap.PlaySound( 0 );
 		}
 		tileMap.Update( player );
 		if( playerMoveCounter > playerMoveCounterMax )
