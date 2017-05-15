@@ -37,14 +37,14 @@ class FallingFloor
 		}
 		else if( map === 1 )
 		{
-			// TODO: Fix the colors so they match the terrain.
+			// TODO: Fix the colors so they match the terrain *better*.
 			return [
-				"#666644",
-				"#555533",
-				"#444422",
-				"#333311",
-				"#222200",
-				"#111100"
+				"#554515",
+				"#443505",
+				"#332500",
+				"#221500",
+				"#110500",
+				"#000000"
 			];
 		}
 		else // if( map === 2 )
