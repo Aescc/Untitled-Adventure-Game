@@ -1145,8 +1145,7 @@ class TileMap
 				new Spike( 7 * 80,6 * 80, 3 ),
 				new Spike( 7 * 80,7 * 80, 2 ),
 				new Spike( 6 * 80,7 * 80, 1 ),
-				new Spike( 6 * 80,8 * 80, 0 ),
-				new Spike( 5 * 80,8 * 80, 0 )
+				new Spike( 6 * 80,8 * 80, 0 )
 			]
 		];
 		this.currentMap = -1;
