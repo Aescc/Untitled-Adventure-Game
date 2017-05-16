@@ -414,7 +414,92 @@ class TileMap
 				[ 0,0,0,0,0,0,0,0,0,2 ],
 				[ 0,0,0,0,0,2,2,2,2,2 ],
 				[ 0,0,0,0,0,2,0,0,0,0 ]
+			],
+			[
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ]
+			],
+			[
+				[ 0,0,0,2,0,0,0,0,0,0 ],
+				[ 0,0,0,2,0,0,0,0,0,0 ],
+				[ 0,0,0,2,2,2,2,2,0,0 ],
+				[ 0,0,0,0,0,2,0,0,0,0 ],
+				[ 0,0,0,2,2,2,2,2,0,0 ],
+				[ 0,0,0,2,0,0,0,2,0,0 ],
+				[ 0,0,0,2,0,0,0,2,0,0 ],
+				[ 0,0,0,2,2,2,2,2,0,0 ],
+				[ 0,0,0,0,0,2,0,0,0,0 ],
+				[ 0,0,0,0,0,2,0,0,0,0 ]
+			],
+			[
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ]
+			],
+			[
+				[ 0,0,0,0,0,0,0,2,0,0 ],
+				[ 0,0,0,0,0,0,0,2,2,2 ],
+				[ 0,0,0,2,2,2,2,0,0,2 ],
+				[ 0,0,0,2,0,0,2,0,2,2 ],
+				[ 0,0,2,2,2,0,2,0,2,2 ],
+				[ 0,0,2,2,2,0,2,2,2,2 ],
+				[ 0,0,2,2,2,0,0,0,0,0 ],
+				[ 0,0,0,2,0,0,0,0,0,0 ],
+				[ 0,0,0,2,2,2,0,0,0,0 ],
+				[ 0,0,0,0,0,2,0,0,0,0 ]
+			],
+			[
+				[ 0,0,0,0,0,2,0,0,0,0 ],
+				[ 0,0,0,0,0,2,0,0,0,0 ],
+				[ 0,0,0,0,0,2,0,0,0,0 ],
+				[ 0,0,0,0,0,2,0,0,0,0 ],
+				[ 0,0,0,2,2,2,2,2,0,0 ],
+				[ 0,0,0,2,0,2,0,2,0,0 ],
+				[ 0,0,0,2,2,2,2,2,0,0 ],
+				[ 0,0,0,0,0,2,0,0,0,0 ],
+				[ 0,0,0,0,0,2,0,0,0,0 ],
+				[ 0,0,0,0,0,2,0,0,0,0 ]
+			],
+			[
+				[ 0,0,0,2,2,2,2,0,0,0 ],
+				[ 0,0,0,2,2,2,2,0,0,0 ],
+				[ 0,0,0,2,2,2,2,0,0,0 ],
+				[ 0,0,0,2,2,2,2,0,0,0 ],
+				[ 0,0,0,2,2,2,2,0,0,0 ],
+				[ 0,0,0,2,2,2,2,0,0,0 ],
+				[ 0,0,0,2,2,2,2,0,0,0 ],
+				[ 0,0,0,2,2,2,2,0,0,0 ],
+				[ 0,0,0,2,2,2,2,0,0,0 ],
+				[ 0,0,0,2,2,2,2,0,0,0 ]
+			],
+			[
+				[ 0,0,0,0,0,0,2,0,0,0 ],
+				[ 0,0,0,0,0,0,2,2,0,0 ],
+				[ 0,0,0,0,0,0,0,2,2,0 ],
+				[ 0,0,0,0,0,0,0,0,2,2 ],
+				[ 0,0,0,0,0,0,0,0,0,2 ],
+				[ 0,0,0,0,0,0,0,0,2,2 ],
+				[ 0,0,0,0,0,0,0,2,2,0 ],
+				[ 0,0,0,0,0,0,2,2,0,0 ],
+				[ 0,0,0,0,0,2,2,0,0,0 ],
+				[ 0,0,0,0,0,2,0,0,0,0 ]
 			]
+			// at 41 Scene 2
 		];
 		this.enemies = [
 			// Scene 0!
@@ -504,6 +589,28 @@ class TileMap
 			],
 			[],
 			[],
+			[],
+			[
+				new Enemy( 3 * 80,1 * 80,[ 3,3,3,3,1,1,2,2,2,2,1,1,3,3,3,3,1,1,2,2,2,2,1,3,3,3,3,0,0,2,2,2,2,0,0,3,3,3,3,0,0,2,2,2,2,0 ],undefined,1 )
+			],
+			[
+				new Enemy( 3 * 80,2 * 80,[ 3,3,3,3,2,2,2,2 ],undefined,1 ),
+				new Enemy( 3 * 80,4 * 80,[ 3,3,3,3,1,1,1,2,2,2,2,0,0,0 ],undefined,1 ),
+				new Enemy( 7 * 80,4 * 80,[ 1,1,1,2,2,2,2,0,0,0,3,3,3,3 ],undefined,1 ),
+				new Enemy( 7 * 80,7 * 80,[ 2,2,2,2,0,0,0,3,3,3,3,1,1,1 ],undefined,1 ),
+				new Enemy( 3 * 80,7 * 80,[ 0,0,0,3,3,3,3,1,1,1,2,2,2,2 ],undefined,1 )
+			],
+			[],
+			[
+				new Enemy( 8 * 80,3 * 80,[ 1,1,3,0,0,2 ],undefined,1 )
+			],
+			[
+				new Enemy( 3 * 80,4 * 80,[ 3,3,1,1,3,3,0,0,2,2,1,1,2,2,0,0 ],undefined,1 ),
+				new Enemy( 5 * 80,4 * 80,[ 1,1,2,2,0,0,3,3,1,1,3,3,0,0,2,2 ],undefined,1 )
+			],
+			[
+				new Enemy( 3 * 80,2 * 80,[ 1,1,1,1,3,0,0,0,0,3,1,1,1,1,3,0,0,0,0,2,1,1,1,1,2,0,0,0,0,2 ],undefined,1 )
+			],
 			[]
 		];
 		this.fallingFloors = [
@@ -633,6 +740,13 @@ class TileMap
 				new FallingFloor( 5 * 80,6 * 80,undefined,undefined,1 ),
 				new FallingFloor( 7 * 80,6 * 80,undefined,undefined,1 )
 			],
+			[],
+			[],
+			[],
+			[],
+			[],
+			[],
+			[],
 			[]
 		];
 		this.flameThrowers = [
@@ -712,7 +826,16 @@ class TileMap
 				new FlameThrower( 4 * 80,1 * 80,90,1 ),
 				new FlameThrower( 6 * 80,1 * 80,90,1 ),
 				new FlameThrower( 8 * 80,1 * 80,90,1 )
-			]
+			],
+			[],
+			[],
+			[],
+			[
+				new FlameThrower( 2 * 80,2 * 80,45,3 )
+			],
+			[],
+			[],
+			[]
 		];
 		this.spikes = [
 			// Scene 0!
@@ -925,7 +1048,106 @@ class TileMap
 				new Spike( 4 * 80,6 * 80,0 ),
 				new Spike( 6 * 80,6 * 80,0 )
 			],
-			[]
+			[],
+			[
+				new Spike( 4 * 80,1 * 80,0 ),
+				new Spike( 4 * 80,2 * 80,0 ),
+				new Spike( 4 * 80,3 * 80,0 ),
+				new Spike( 4 * 80,4 * 80,0 ),
+				new Spike( 4 * 80,5 * 80,0 ),
+				new Spike( 4 * 80,6 * 80,0 ),
+				new Spike( 4 * 80,7 * 80,0 ),
+				new Spike( 5 * 80,1 * 80,7 ),
+				new Spike( 5 * 80,2 * 80,7 ),
+				new Spike( 5 * 80,3 * 80,7 ),
+				new Spike( 5 * 80,4 * 80,7 ),
+				new Spike( 5 * 80,5 * 80,7 ),
+				new Spike( 5 * 80,6 * 80,7 ),
+				new Spike( 5 * 80,7 * 80,7 ),
+				new Spike( 6 * 80,1 * 80,0 ),
+				new Spike( 6 * 80,2 * 80,0 ),
+				new Spike( 6 * 80,3 * 80,0 ),
+				new Spike( 6 * 80,4 * 80,0 ),
+				new Spike( 6 * 80,5 * 80,0 ),
+				new Spike( 6 * 80,6 * 80,0 ),
+				new Spike( 6 * 80,7 * 80,0 ),
+			],
+			[],
+			[
+				new Spike( 4 * 80,1 * 80,14 ),
+				new Spike( 4 * 80,2 * 80,13 ),
+				new Spike( 4 * 80,3 * 80,12 ),
+				new Spike( 4 * 80,4 * 80,11 ),
+				new Spike( 4 * 80,5 * 80,10 ),
+				new Spike( 4 * 80,6 * 80, 9 ),
+				new Spike( 4 * 80,7 * 80, 8 ),
+				new Spike( 5 * 80,1 * 80, 7 ),
+				new Spike( 5 * 80,2 * 80, 6 ),
+				new Spike( 5 * 80,3 * 80, 5 ),
+				new Spike( 5 * 80,4 * 80, 4 ),
+				new Spike( 5 * 80,5 * 80, 3 ),
+				new Spike( 5 * 80,6 * 80, 2 ),
+				new Spike( 5 * 80,7 * 80, 1 ),
+				new Spike( 6 * 80,1 * 80, 0 ),
+				new Spike( 6 * 80,2 * 80, 5 ),
+				new Spike( 6 * 80,3 * 80, 4 ),
+				new Spike( 6 * 80,4 * 80, 3 ),
+				new Spike( 6 * 80,5 * 80, 2 ),
+				new Spike( 6 * 80,6 * 80, 1 ),
+				new Spike( 6 * 80,7 * 80, 0 )
+			],
+			[
+				new Spike( 2 * 80,4 * 80, 0 ),
+				new Spike( 2 * 80,5 * 80, 2 ),
+				new Spike( 2 * 80,6 * 80, 3 ),
+				new Spike( 3 * 80,4 * 80, 5 ),
+				new Spike( 3 * 80,5 * 80, 6 ),
+				new Spike( 3 * 80,6 * 80, 8 ),
+				new Spike( 4 * 80,4 * 80,10 ),
+				new Spike( 4 * 80,5 * 80,12 ),
+				new Spike( 4 * 80,6 * 80,14 )
+			],
+			[],
+			[
+				new Spike( 3 * 80,2 * 80,0 ),
+				new Spike( 4 * 80,2 * 80,0 ),
+				new Spike( 5 * 80,2 * 80,0 ),
+				new Spike( 6 * 80,2 * 80,0 ),
+				new Spike( 3 * 80,3 * 80,7 ),
+				new Spike( 4 * 80,3 * 80,7 ),
+				new Spike( 5 * 80,3 * 80,7 ),
+				new Spike( 6 * 80,3 * 80,7 ),
+				new Spike( 3 * 80,4 * 80,0 ),
+				new Spike( 4 * 80,4 * 80,0 ),
+				new Spike( 5 * 80,4 * 80,0 ),
+				new Spike( 6 * 80,4 * 80,0 ),
+				new Spike( 3 * 80,5 * 80,7 ),
+				new Spike( 4 * 80,5 * 80,7 ),
+				new Spike( 5 * 80,5 * 80,7 ),
+				new Spike( 6 * 80,5 * 80,7 ),
+				new Spike( 3 * 80,6 * 80,0 ),
+				new Spike( 4 * 80,6 * 80,0 ),
+				new Spike( 5 * 80,6 * 80,0 ),
+				new Spike( 6 * 80,6 * 80,0 )
+			],
+			[
+				new Spike( 6 * 80,1 * 80,14 ),
+				new Spike( 7 * 80,1 * 80,13 ),
+				new Spike( 7 * 80,2 * 80,12 ),
+				new Spike( 8 * 80,2 * 80,11 ),
+				new Spike( 8 * 80,3 * 80,10 ),
+				new Spike( 9 * 80,3 * 80, 9 ),
+				new Spike( 9 * 80,4 * 80, 8 ),
+				new Spike( 9 * 80,5 * 80, 7 ),
+				new Spike( 8 * 80,5 * 80, 6 ),
+				new Spike( 8 * 80,6 * 80, 5 ),
+				new Spike( 7 * 80,6 * 80, 4 ),
+				new Spike( 7 * 80,6 * 80, 3 ),
+				new Spike( 7 * 80,7 * 80, 2 ),
+				new Spike( 6 * 80,7 * 80, 1 ),
+				new Spike( 6 * 80,8 * 80, 0 ),
+				new Spike( 5 * 80,8 * 80, 0 )
+			]
 		];
 		this.currentMap = -1;
 		this.colors = [
@@ -953,7 +1175,12 @@ class TileMap
 			new Audio( 'audio/fall_1.mp3' ),
 			new Audio( 'audio/fall_2.mp3' ),
 			new Audio( 'audio/fall_3.mp3' )
-		]
+		];
+		this.fireSounds = [
+			new Audio( 'audio/fire_1.mp3' ),
+			new Audio( 'audio/fire_2.mp3' ),
+			new Audio( 'audio/fire_3.mp3' )
+		];
 		this.colorCounter = 0;
 		this.colorCounterMax = 15; // Frequency of tile color updates; Lower is faster.
 		this.transitionAlpha = 1.0;
@@ -1028,11 +1255,13 @@ class TileMap
 			if( player.GetX( true ) === this.flameThrowers[this.currentMap][i].GetFireballX() &&
 				player.GetY( true ) === this.flameThrowers[this.currentMap][i].GetFireballY() )
 			{
+				this.fireSounds[ Random( 0,this.fireSounds.length - 1 ) ].play();
 				player.SetDead( true );
 			}
 			if( player.GetX( true ) === this.flameThrowers[this.currentMap][i].GetX() &&
 				player.GetY( true ) === this.flameThrowers[this.currentMap][i].GetY() )
 			{
+				this.fireSounds[ Random( 0,this.fireSounds.length - 1 ) ].play();
 				player.SetDead( true );
 			}
 		}
@@ -1049,7 +1278,7 @@ class TileMap
 				}
 				if( this.fallingFloors[this.currentMap][i].GetFalling() )
 				{
-					this.fallSounds[ Random( 0,this.fallSounds.length - 1 ) ].play();
+					// this.fallSounds[ Random( 0,this.fallSounds.length - 1 ) ].play();
 					player.SetDead( true );
 				}
 			}
@@ -1062,6 +1291,7 @@ class TileMap
 			player.GetY( true ) === this.spikes[this.currentMap][i].GetY() &&
 			this.spikes[this.currentMap][i].GetActive() )
 			{
+				this.fireSounds[ Random( 0,this.fireSounds.length - 1 ) ].play();
 				player.SetDead( true );
 			}
 		}
@@ -1089,6 +1319,10 @@ class TileMap
 		{
 			this.fallingFloors[this.currentMap][i].Draw();
 		}
+		for( var i = 0; i < this.spikes[this.currentMap].length; ++i )
+		{
+			this.spikes[this.currentMap][i].Draw();
+		}
 		for( var i = 0; i < this.flameThrowers[this.currentMap].length; ++i )
 		{
 			this.flameThrowers[this.currentMap][i].Draw();
@@ -1096,10 +1330,6 @@ class TileMap
 		for( var i = 0; i < this.enemies[this.currentMap].length; ++i )
 		{
 			this.enemies[this.currentMap][i].Draw();
-		}
-		for( var i = 0; i < this.spikes[this.currentMap].length; ++i )
-		{
-			this.spikes[this.currentMap][i].Draw();
 		}
 		//
 		this.transitionAlpha -= 0.02;

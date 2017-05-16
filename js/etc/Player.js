@@ -24,6 +24,15 @@ class Player
 		this.moveDir = 0;
 		this.hasInitialized = false;
 		this.img = new Image();
+		
+		this.fallSounds = [
+			new Audio( 'audio/hurt_1.mp3' ),
+			new Audio( 'audio/hurt_2.mp3' ),
+			new Audio( 'audio/hurt_3.mp3' ),
+			new Audio( 'audio/hurt_4.mp3' ),
+			new Audio( 'audio/hurt_5.mp3' ),
+		];
+		this.hasPlayedSound = false;
 	}
 	Init()
 	{
@@ -117,12 +126,18 @@ class Player
 		++this.drawY;
 		if( this.w < 0 || this.h < 0 )
 		{
+			this.hasPlayedSound = false;
 			this.x = this.xStart;
 			this.y = this.yStart;
 			this.w = this.wStart;
 			this.h = this.hStart;
 			this.speed = this.speedStart;
 			this.isDead = false;
+		}
+		else if( !this.hasPlayedSound )
+		{
+			this.fallSounds[ Random( 0,this.fallSounds.length - 1 ) ].play();
+			this.hasPlayedSound = true;
 		}
 	}
 	SetDead( willBeKilled )
