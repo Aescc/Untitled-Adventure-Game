@@ -1,5 +1,5 @@
-const canvas = document.getElementById("gc");
-const context = canvas.getContext("2d");
+const canvas = document.getElementById( "gc" );
+const context = canvas.getContext( "2d" );
 
 var playerMoveCounter = 0;
 const playerMoveCounterMax = 5;
@@ -15,6 +15,7 @@ var player = new Player();
 var tileMap = new TileMap();
 
 var isStarted = false;
+var hasWon = false;
 
 window.onload = function()
 {
@@ -76,13 +77,20 @@ function Update()
 			tileMap.Transition( undefined,currentScene );
 			++sceneProgress;
 			// TODO: Put a puzzle in between each scene during transition.
-			if( sceneProgress === 30 && currentScene === 0 )
+			if( sceneProgress === 15 && currentScene === 0 )
 			{
+				sceneProgress = 0;
 				currentScene = 1;
 			}
-			if( sceneProgress === 65 && currentScene === 1 )
+			if( sceneProgress === 25 && currentScene === 1 )
 			{
+				sceneProgress = 0;
 				currentScene = 2;
+			}
+			if( sceneProgress === 40 && currentScene === 2 )
+			{
+				hasWon = true;
+				// TODO: Make winning happen.
 			}
 		}
 		player.Move( player.BindToScreen(),player.speed ); // Must come BEFORE tileMap check.
@@ -225,5 +233,11 @@ function Draw()
 				}
 			}
 		}
+	}
+	if( hasWon )
+	{
+		player.SetX( 5 * 80 );
+		player.SetY( 9 * 80 );
+		Rect( 0,0,canvas.width,canvas.height,"#000" );
 	}
 }
