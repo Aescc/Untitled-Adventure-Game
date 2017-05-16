@@ -26,6 +26,7 @@ class Enemy
 		}
 		else if( map === 2 )
 		{
+			// TODO: Make this blue color look better.
 			return "#" + Random( 11,99 ) + Random( 11,99 ) + "DD";
 		}
 	}

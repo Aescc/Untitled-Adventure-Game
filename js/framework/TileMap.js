@@ -498,8 +498,92 @@ class TileMap
 				[ 0,0,0,0,0,0,2,2,0,0 ],
 				[ 0,0,0,0,0,2,2,0,0,0 ],
 				[ 0,0,0,0,0,2,0,0,0,0 ]
+			],
+			[
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ],
+				[ 0,0,0,0,2,2,2,0,0,0 ]
+			],
+			// Scene 2!
+			[
+				[ 0,0,0,0,3,3,3,0,0,0 ],
+				[ 0,0,0,0,3,3,3,0,0,0 ],
+				[ 0,0,0,0,3,3,3,0,0,0 ],
+				[ 0,0,0,0,3,3,3,0,0,0 ],
+				[ 0,0,0,0,3,3,3,0,0,0 ],
+				[ 0,0,0,0,3,3,3,0,0,0 ],
+				[ 0,0,0,0,3,3,3,0,0,0 ],
+				[ 0,0,0,0,3,3,3,0,0,0 ],
+				[ 0,0,0,0,3,3,3,0,0,0 ],
+				[ 0,0,0,0,3,3,3,0,0,0 ]
+			],
+			[
+				[ 0,0,0,0,0,3,0,0,0,0 ],
+				[ 0,0,3,3,3,3,3,3,0,0 ],
+				[ 0,0,3,0,0,0,0,0,0,0 ],
+				[ 0,0,3,0,0,0,0,0,0,0 ],
+				[ 0,0,3,0,0,0,0,0,0,0 ],
+				[ 0,0,3,0,0,0,0,0,0,0 ],
+				[ 0,0,3,0,0,0,0,0,0,0 ],
+				[ 0,0,3,0,0,0,0,0,0,0 ],
+				[ 0,0,3,0,0,0,0,0,0,0 ],
+				[ 0,0,3,3,3,3,0,0,0,0 ]
+			],
+			[
+				[ 3,0,0,0,0,0,0,0,0,0 ],
+				[ 3,0,0,3,3,3,3,3,0,0 ],
+				[ 3,0,3,3,0,0,0,3,3,0 ],
+				[ 3,0,3,0,3,3,3,0,3,0 ],
+				[ 3,0,3,0,3,0,3,0,3,0 ],
+				[ 3,0,3,3,3,0,3,0,3,0 ],
+				[ 3,0,0,0,0,0,3,0,3,0 ],
+				[ 3,3,0,0,3,3,3,0,3,0 ],
+				[ 0,3,3,3,3,0,0,3,3,0 ],
+				[ 0,0,0,0,0,3,3,3,0,0 ]
+			],
+			[
+				[ 0,0,0,0,0,0,0,0,3,0 ],
+				[ 3,3,3,3,3,3,3,0,3,3 ],
+				[ 3,0,0,0,0,0,3,3,0,3 ],
+				[ 3,0,3,3,3,3,0,3,0,3 ],
+				[ 3,0,3,0,0,3,0,3,0,3 ],
+				[ 3,0,3,0,0,3,0,3,0,3 ],
+				[ 3,0,3,0,0,3,0,3,3,3 ],
+				[ 3,3,3,0,3,3,3,0,3,3 ],
+				[ 3,3,3,0,3,3,3,0,3,3 ],
+				[ 3,3,3,0,3,3,3,0,0,0 ]
+			],
+			[
+				[ 0,0,0,3,0,0,0,3,0,0 ],
+				[ 0,0,0,3,0,3,3,3,0,0 ],
+				[ 0,0,0,0,0,3,0,3,0,0 ],
+				[ 0,0,0,3,3,3,0,3,0,0 ],
+				[ 0,0,0,3,0,0,0,3,0,0 ],
+				[ 0,0,0,3,0,3,0,3,0,0 ],
+				[ 0,0,0,3,0,3,0,0,0,0 ],
+				[ 0,0,0,3,3,3,0,3,0,0 ],
+				[ 0,0,0,3,0,3,3,3,0,0 ],
+				[ 0,0,0,3,0,3,0,3,0,0 ]
+			],
+			[
+				[ 3,3,3,3,3,0,0,3,3,3 ],
+				[ 3,3,3,0,3,3,3,3,3,3 ],
+				[ 3,0,3,0,0,0,0,0,0,0 ],
+				[ 3,3,3,3,3,3,3,3,3,0 ],
+				[ 0,0,0,0,0,3,0,0,3,0 ],
+				[ 0,3,3,3,3,3,3,0,3,0 ],
+				[ 0,3,0,0,0,0,3,0,3,3 ],
+				[ 0,3,3,3,3,0,3,3,3,3 ],
+				[ 0,3,3,0,0,0,0,0,3,3 ],
+				[ 3,3,3,3,3,3,3,3,0,3 ]
 			]
-			// at 41 Scene 2
 		];
 		this.enemies = [
 			// Scene 0!
@@ -611,7 +695,31 @@ class TileMap
 			[
 				new Enemy( 3 * 80,2 * 80,[ 1,1,1,1,3,0,0,0,0,3,1,1,1,1,3,0,0,0,0,2,1,1,1,1,2,0,0,0,0,2 ],undefined,1 )
 			],
-			[]
+			[],
+			[
+				new Enemy( 5 * 80,2 * 80,[ 2,3,0,1,3,2,1,0 ],undefined,1 ),
+				new Enemy( 5 * 80,5 * 80,[ 0,1,3,2,1,0,2,3 ],undefined,1 )
+			],
+			// Scene 2!
+			[
+				new Enemy( 4 * 80,2 * 80,[ 3,1,3,0,2,1,2,0 ],undefined,2 ),
+				new Enemy( 6 * 80,6 * 80,[ 2,0,2,1,3,0,3,1 ],undefined,2 )
+			],
+			[
+				new Enemy( 2 * 80,1 * 80,[ 3,3,3,3,3,2,2,2,2,2 ],undefined, 2 )
+			],
+			[],
+			[
+				new Enemy( 8 * 80,2 * 80,[ 1,3,1,2,1,3,0,2,0,3,0,2 ],undefined,2 )
+			],
+			[
+				new Enemy( 3 * 80,0 * 80,[ 1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0 ],undefined,2 ),
+				new Enemy( 5 * 80,1 * 80,[ 1,1,1,1,1,1,1,0,0,0,0,0,0,0 ],undefined,2 ),
+				new Enemy( 7 * 80,0 * 80,[ 1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0 ],undefined,2 )
+			],
+			[
+				new Enemy( 1 * 80,2 * 80,[ 3,2,1,0,2,3,0,1 ],undefined,2 )
+			]
 		];
 		this.fallingFloors = [
 			// Scene 0!
@@ -747,7 +855,43 @@ class TileMap
 			[],
 			[],
 			[],
-			[]
+			[],
+			[],
+			// Scene 2!
+			[],
+			[],
+			[
+				new FallingFloor( 0 * 80,1 * 80,undefined,undefined,2 ),
+				new FallingFloor( 0 * 80,2 * 80,undefined,undefined,2 ),
+				new FallingFloor( 0 * 80,3 * 80,undefined,undefined,2 ),
+				new FallingFloor( 0 * 80,4 * 80,undefined,undefined,2 ),
+				new FallingFloor( 0 * 80,5 * 80,undefined,undefined,2 ),
+				new FallingFloor( 0 * 80,6 * 80,undefined,undefined,2 )
+			],
+			[
+				new FallingFloor( 0 * 80,1 * 80,undefined,undefined,2 ),
+				new FallingFloor( 1 * 80,1 * 80,undefined,undefined,2 ),
+				new FallingFloor( 2 * 80,1 * 80,undefined,undefined,2 ),
+				new FallingFloor( 3 * 80,1 * 80,undefined,undefined,2 ),
+				new FallingFloor( 4 * 80,1 * 80,undefined,undefined,2 ),
+				new FallingFloor( 5 * 80,1 * 80,undefined,undefined,2 ),
+				new FallingFloor( 6 * 80,1 * 80,undefined,undefined,2 ),
+				new FallingFloor( 6 * 80,2 * 80,undefined,undefined,2 )
+			],
+			[],
+			[
+				new FallingFloor( 3 * 80,3 * 80,undefined,undefined,2 ),
+				new FallingFloor( 4 * 80,3 * 80,undefined,undefined,2 ),
+				new FallingFloor( 5 * 80,3 * 80,undefined,undefined,2 ),
+				new FallingFloor( 6 * 80,3 * 80,undefined,undefined,2 ),
+				new FallingFloor( 7 * 80,3 * 80,undefined,undefined,2 ),
+				new FallingFloor( 8 * 80,3 * 80,undefined,undefined,2 ),
+				new FallingFloor( 5 * 80,4 * 80,undefined,undefined,2 ),
+				new FallingFloor( 3 * 80,5 * 80,undefined,undefined,2 ),
+				new FallingFloor( 4 * 80,5 * 80,undefined,undefined,2 ),
+				new FallingFloor( 5 * 80,5 * 80,undefined,undefined,2 ),
+				new FallingFloor( 6 * 80,5 * 80,undefined,undefined,2 )
+			]
 		];
 		this.flameThrowers = [
 			// Scene 0!
@@ -833,6 +977,21 @@ class TileMap
 			[
 				new FlameThrower( 2 * 80,2 * 80,45,3 )
 			],
+			[],
+			[],
+			[
+				new FlameThrower( 6 * 80,4 * 80,35,3 )
+			],
+			[],
+			// Scene 2!
+			[],
+			[
+				new FlameThrower( 0 * 80,2 * 80,33,3 ),
+				new FlameThrower( 4 * 80,4 * 80,33,2 ),
+				new FlameThrower( 0 * 80,6 * 80,33,3 ),
+				new FlameThrower( 4 * 80,8 * 80,33,2 )
+			],
+			[],
 			[],
 			[],
 			[]
@@ -1132,20 +1291,73 @@ class TileMap
 			],
 			[
 				new Spike( 6 * 80,1 * 80,14 ),
-				new Spike( 7 * 80,1 * 80,13 ),
 				new Spike( 7 * 80,2 * 80,12 ),
-				new Spike( 8 * 80,2 * 80,11 ),
 				new Spike( 8 * 80,3 * 80,10 ),
-				new Spike( 9 * 80,3 * 80, 9 ),
 				new Spike( 9 * 80,4 * 80, 8 ),
-				new Spike( 9 * 80,5 * 80, 7 ),
 				new Spike( 8 * 80,5 * 80, 6 ),
-				new Spike( 8 * 80,6 * 80, 5 ),
 				new Spike( 7 * 80,6 * 80, 4 ),
-				new Spike( 7 * 80,6 * 80, 3 ),
-				new Spike( 7 * 80,7 * 80, 2 ),
-				new Spike( 6 * 80,7 * 80, 1 ),
-				new Spike( 6 * 80,8 * 80, 0 )
+				new Spike( 6 * 80,7 * 80, 2 ),
+				new Spike( 5 * 80,8 * 80, 0 )
+			],
+			[
+				new Spike( 4 * 80,1 * 80, 0 ),
+				new Spike( 4 * 80,2 * 80, 2 ),
+				new Spike( 4 * 80,3 * 80, 4 ),
+				new Spike( 4 * 80,4 * 80, 6 ),
+				new Spike( 4 * 80,5 * 80, 8 ),
+				new Spike( 4 * 80,6 * 80,10 ),
+				new Spike( 4 * 80,7 * 80,12 ),
+				new Spike( 4 * 80,8 * 80,14 ),
+				new Spike( 6 * 80,1 * 80, 0 ),
+				new Spike( 6 * 80,2 * 80, 2 ),
+				new Spike( 6 * 80,3 * 80, 4 ),
+				new Spike( 6 * 80,4 * 80, 6 ),
+				new Spike( 6 * 80,5 * 80, 8 ),
+				new Spike( 6 * 80,6 * 80,10 ),
+				new Spike( 6 * 80,7 * 80,12 ),
+				new Spike( 6 * 80,8 * 80,14 )
+			],
+			// Scene 2!
+			[],
+			[],
+			[
+				new Spike( 3 * 80,1 * 80, 0 ),
+				new Spike( 4 * 80,1 * 80, 4 ),
+				new Spike( 5 * 80,1 * 80, 7 ),
+				new Spike( 6 * 80,1 * 80,11 ),
+				new Spike( 7 * 80,1 * 80,14 ),
+				new Spike( 6 * 80,3 * 80,14 ),
+				new Spike( 6 * 80,4 * 80,11 ),
+				new Spike( 6 * 80,5 * 80, 7 ),
+				new Spike( 6 * 80,6 * 80, 4 ),
+				new Spike( 6 * 80,7 * 80, 0 )
+			],
+			[
+				new Spike( 0 * 80,7 * 80, 0 ),
+				new Spike( 0 * 80,8 * 80, 3 ),
+				new Spike( 0 * 80,9 * 80, 6 ),
+				new Spike( 1 * 80,7 * 80, 9 ),
+				new Spike( 1 * 80,8 * 80,12 ),
+				new Spike( 1 * 80,9 * 80,14 ),
+				new Spike( 2 * 80,7 * 80, 0 ),
+				new Spike( 2 * 80,8 * 80, 7 ),
+				new Spike( 2 * 80,9 * 80,14 ),
+				new Spike( 8 * 80,6 * 80, 0 ),
+				new Spike( 8 * 80,7 * 80, 3 ),
+				new Spike( 8 * 80,8 * 80, 6 ),
+				new Spike( 9 * 80,6 * 80, 9 ),
+				new Spike( 9 * 80,7 * 80,12 ),
+				new Spike( 9 * 80,8 * 80,14 )
+			],
+			[
+				new Spike( 4 * 80,3 * 80,Random( 0,14 ) ),
+				new Spike( 4 * 80,7 * 80,Random( 0,14 ) ),
+				new Spike( 6 * 80,1 * 80,Random( 0,14 ) )
+			],
+			[
+				new Spike( 4 * 80,1 * 80,8 ),
+				new Spike( 5 * 80,1 * 80,4 ),
+				new Spike( 6 * 80,1 * 80,0 )
 			]
 		];
 		this.currentMap = -1;
@@ -1206,6 +1418,15 @@ class TileMap
 					// TODO: Fix color generation to be more yellow!
 					const randR = Random( 44,66 );
 					const randG = randR - 15;
+					const randB = Random( 11,22 );
+					const randColor = "#" + randR + randG + randB;
+					this.colors[j][i] = randColor;
+				}
+				else if( this.maps[this.currentMap][j][i] === 3 )
+				{
+					// TODO: Make this more red!
+					const randR = Random( 55,99 );
+					const randG = Random( 11,22 );
 					const randB = Random( 11,22 );
 					const randColor = "#" + randR + randG + randB;
 					this.colors[j][i] = randColor;
@@ -1379,13 +1600,13 @@ class TileMap
 			{
 				// TODO: Finish maps and change this.maps.length - 1 to 41
 				this.audio1.play();
-				this.currentMap = Random( 21,this.maps.length - 1 );
+				this.currentMap = Random( 21,41 );
 			}
 			else if( sceneNum === 2 )
 			{
 				this.audio2.play();
 				// TODO: Finish maps and change this.maps.length - 1 to 63
-				// this.currentMap = Random( 42,this.maps.length - 1 );
+				this.currentMap = Random( 42,this.maps.length - 1 );
 			}
 		}
 		else

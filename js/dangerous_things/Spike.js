@@ -8,6 +8,7 @@ class Spike
 		this.h = 80;
 		// this.c = [ "#666666","#775544","#884433","#993322" ];
 		this.c = "#993322";
+		this.c = "#CC3322";
 		this.alpha = [ 0.0,0.3,0.6,1.0 ];
 		this.isActive = false;
 		this.moveCycle = [ 0,0,0,1,1,2,2,3,3,3,3,2,2,1,1 ];
