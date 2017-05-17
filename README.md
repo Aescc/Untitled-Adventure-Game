@@ -11,5 +11,7 @@ Note: The sound effects used in this are available under a Creative Commons Attr
 Note: While these sounds are used in this project, they were not expressly made for it.
 
 Audio credits:
+
 	-ALL SOUNDS POSTED BY MIKE KOENIG ON SOUNDBIBLE.
+	
 	-MUSIC BY WILL HELLIWELL AND MAURICE MISHAEL.
