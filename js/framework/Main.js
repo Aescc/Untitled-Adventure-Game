@@ -17,6 +17,10 @@ var tileMap = new TileMap();
 var isStarted = false;
 var hasWon = false;
 
+var track1 = new Audio( 'audio/level_track_1.wav' );
+var track2 = new Audio( 'audio/level_track_2.wav' );
+var track3 = new Audio( 'audio/level_track_3.wav' );
+
 window.onload = function()
 {
 	const fps = 30;
@@ -72,6 +76,32 @@ function Update()
 	if( isStarted )
 	{
 		// Update things here
+		if( sceneProgress >= 0 && sceneProgress < 16 )
+		{
+			track1.addEventListener('ended', function() {
+				this.currentTime = 0;
+				this.play();
+			}, false);
+			track1.play();
+		}
+		else if( sceneProgress >= 16 && sceneProgress < 25 )
+		{
+			track1.pause();
+			track2.addEventListener('ended', function() {
+				this.currentTime = 0;
+				this.play();
+			}, false);
+			track2.play();
+		}
+		else
+		{
+			track2.pause();
+			track3.addEventListener('ended', function() {
+				this.currentTime = 0;
+				this.play();
+			}, false);
+			track3.play();
+		}
 		if( player.BindToScreen() === 1 )
 		{
 			tileMap.Transition( undefined,currentScene );
@@ -79,12 +109,12 @@ function Update()
 			// TODO: Put a puzzle in between each scene during transition.
 			if( sceneProgress === 15 && currentScene === 0 )
 			{
-				sceneProgress = 0;
+				// sceneProgress = 0;
 				currentScene = 1;
 			}
 			if( sceneProgress === 25 && currentScene === 1 )
 			{
-				sceneProgress = 0;
+				// sceneProgress = 0;
 				currentScene = 2;
 			}
 			if( sceneProgress === 40 && currentScene === 2 )
