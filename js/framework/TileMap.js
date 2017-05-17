@@ -655,6 +655,18 @@ class TileMap
 				[ 0,0,3,3,3,0,3,3,3,0 ],
 				[ 0,0,0,0,3,3,3,0,0,0 ],
 				[ 0,0,0,0,0,3,0,0,0,0 ]
+			],
+			[
+				[ 0,0,0,0,0,0,0,3,0,0 ],
+				[ 0,0,0,0,0,0,0,3,0,0 ],
+				[ 0,0,0,0,0,0,0,3,0,0 ],
+				[ 0,0,0,0,0,3,3,3,0,0 ],
+				[ 0,0,0,0,0,3,0,3,0,0 ],
+				[ 0,0,0,0,0,3,3,3,0,0 ],
+				[ 0,0,0,0,0,3,0,0,0,0 ],
+				[ 0,0,0,0,0,3,0,0,0,0 ],
+				[ 0,0,0,0,0,3,0,0,0,0 ],
+				[ 0,0,0,0,0,3,0,0,0,0 ]
 			]
 		];
 		this.enemies = [
@@ -813,6 +825,10 @@ class TileMap
 			[
 				new Enemy( 7 * 80,2 * 80,[ 3,3,2,2 ],undefined,2 ),
 				new Enemy( 9 * 80,5 * 80,[ 2,2,3,3 ],undefined,2 )
+			],
+			[
+				new Enemy( 3 * 80,3 * 80,[ 3,3,3,3,3,2,2,2,2,2 ],undefined,2 ),
+				new Enemy( 8 * 80,5 * 80,[ 2,2,2,2,3,3,3,3 ],undefined,2 )
 			]
 		];
 		this.fallingFloors = [
@@ -1001,7 +1017,8 @@ class TileMap
 				new FallingFloor( 6 * 80,6 * 80,undefined,undefined,2 ),
 				new FallingFloor( 6 * 80,7 * 80,undefined,undefined,2 ),
 				new FallingFloor( 6 * 80,8 * 80,undefined,undefined,2 )
-			]
+			],
+			[]
 		];
 		this.flameThrowers = [
 			// Scene 0!
@@ -1120,7 +1137,8 @@ class TileMap
 			[],
 			[
 				new FlameThrower( 0 * 80,6 * 80,75,0 )
-			]
+			],
+			[]
 		];
 		this.spikes = [
 			// Scene 0!
@@ -1558,6 +1576,10 @@ class TileMap
 				new Spike( 2 * 80,3 * 80, 8 ),
 				new Spike( 2 * 80,4 * 80,10 ),
 				new Spike( 2 * 80,5 * 80,12 )
+			],
+			[
+				new Spike( 5 * 80,4 * 80,Random( 0,14 ) ),
+				new Spike( 7 * 80,4 * 80,Random( 0,14 ) )
 			]
 		];
 		this.currentMap = -1;
@@ -1580,7 +1602,8 @@ class TileMap
 			new Audio( 'audio/splat_1.mp3' ),
 			new Audio( 'audio/splat_2.mp3' ),
 			new Audio( 'audio/splat_3.mp3' ),
-			new Audio( 'audio/splat_4.mp3' )
+			new Audio( 'audio/splat_4.mp3' ),
+			new Audio( 'audio/splat_5.mp3' )
 		];
 		this.fallSounds = [
 			new Audio( 'audio/fall_1.mp3' ),

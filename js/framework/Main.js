@@ -84,7 +84,7 @@ function Update()
 			}, false);
 			track1.play();
 		}
-		else if( sceneProgress >= 16 && sceneProgress < 25 )
+		else if( sceneProgress >= 16 && sceneProgress < 26 )
 		{
 			track1.pause();
 			track2.addEventListener('ended', function() {
