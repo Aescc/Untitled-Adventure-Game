@@ -81,7 +81,7 @@ function Update()
 	if( isStarted )
 	{
 		// Update things here
-		if( sceneProgress >= 0 && sceneProgress < 16 )
+		if( sceneProgress >= 0 && sceneProgress <= 15 )
 		{
 			track1.addEventListener('ended', function() {
 				this.currentTime = 0;
@@ -89,7 +89,7 @@ function Update()
 			}, false);
 			track1.play();
 		}
-		else if( sceneProgress >= 16 && sceneProgress < 26 )
+		else if( sceneProgress >= 16 && sceneProgress <= 35 )
 		{
 			track1.pause();
 			track2.addEventListener('ended', function() {
@@ -178,6 +178,7 @@ function Update()
 	}
 	else
 	{
+		/*
 		var tempX = Math.floor( mouse.x );
 		var tempY = Math.floor( mouse.y );
 		while( tempX % 80 !== 0 )
@@ -190,6 +191,7 @@ function Update()
 		}
 		uncoveredTiles[0] = tempX / 80;
 		uncoveredTiles[1] = tempY / 80;
+		*/
 	}
 }
 
@@ -203,7 +205,7 @@ function Draw()
 		player.Draw();
 		if( keyMap[17] )
 		{
-			tileMap.CheckMouseData( mouse.x,mouse.y );
+			// tileMap.CheckMouseData( mouse.x,mouse.y );
 		}
 	}
 	else
@@ -242,6 +244,12 @@ function Draw()
 		Rect( 8 * 80,9 * 80,80,80,"#FFF" );
 		*/
 		
+		Rect( 2 * 80,1 * 80,80,80,"#FF0000" );
+		Text( 3.1 * 80,1.5 * 80,"<--Avoid things that look similar to this :)","#FFF","20PX Arial" );
+		Text( 3.1 * 80,5.5 * 80,"Click the aqua square three times to start!","#0FF","20PX Arial" );
+		Rect( 2 * 80,5 * 80,80,80,"#0FF" );
+		
+		/*
 		for( var i = 0; i < canvas.height / 80; ++i )
 		{
 			for( var j = 0; j < canvas.width / 80; ++j )
@@ -270,6 +278,7 @@ function Draw()
 				}
 			}
 		}
+		*/
 	}
 	if( hasWon )
 	{
