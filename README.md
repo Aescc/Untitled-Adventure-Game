@@ -6,7 +6,7 @@ View here: http://htmlpreview.github.io/?https://github.com/Aescc/Untitled-Adven
 
 Note: Click three times to begin the game.
 
-Note: The sound effects used in this are available under a Creative Commons Attribution-Noncommercial license: https://creativecommons.org/licenses/by-nc/3.0/us/
+Note: The sound effects used are available under a Creative Commons Attribution-Noncommercial license: https://creativecommons.org/licenses/by-nc/3.0/us/
 
 Note: While music and sounds have been used for this project, they were not made specifically for it.
 
