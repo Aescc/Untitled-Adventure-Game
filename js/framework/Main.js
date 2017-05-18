@@ -7,6 +7,8 @@ var clickNum = 0;
 var currentScene = 0;
 var sceneProgress = 0;
 
+var winAlpha = 0.0;
+
 var keyMap = [];
 var uncoveredTiles = [ 0,0 ];
 
@@ -20,6 +22,7 @@ var hasWon = false;
 var track1 = new Audio( 'audio/level_track_1.wav' );
 var track2 = new Audio( 'audio/level_track_2.wav' );
 var track3 = new Audio( 'audio/level_track_3.wav' );
+var winTrack = new Audio( 'audio/win_final.mp3' );
 
 window.onload = function()
 {
@@ -57,7 +60,7 @@ function CheckMousePos( e )
 	const root = document.documentElement;
 	const mouseX = e.clientX - rect.left - root.scrollLeft;
 	const mouseY = e.clientY - rect.top - root.scrollTop;
-	return { x:mouseX, y:mouseY };
+	return { x:mouseX,y:mouseY };
 }
 
 function Init()
@@ -210,7 +213,7 @@ function Draw()
 		Text( 0,450,"MOUSE","#FFF","200PX Arial" );
 		Text( 0,600,"THREE","#FFF","200PX Arial" );
 		Text( 0,750,"TIMES","#FFF","200PX Arial" );
-		*/
+		
 		Rect( 4 * 80,0 * 80,80,80,"#FFF" );
 		Rect( 5 * 80,0 * 80,80,80,"#FFF" );
 		Rect( 3 * 80,1 * 80,80,80,"#FFF" );
@@ -235,39 +238,83 @@ function Draw()
 		Rect( 8 * 80,8 * 80,80,80,"#FFF" );
 		Rect( 1 * 80,9 * 80,80,80,"#FFF" );
 		Rect( 8 * 80,9 * 80,80,80,"#FFF" );
+		*/
+		
 		for( var i = 0; i < canvas.height / 80; ++i )
 		{
 			for( var j = 0; j < canvas.width / 80; ++j )
 			{
 				if( j === uncoveredTiles[0] && i === uncoveredTiles[1] )
 				{
-					Rect( j * 80,i * 80,80,80,"#FFAA00",0.5 );
+					// Rect( j * 80,i * 80,80,80,"#FFAA00",0.5 );
 				}
 				else if( ( j === uncoveredTiles[0] + 1 && i === uncoveredTiles[1] ) ||
 						 ( j === uncoveredTiles[0] - 1 && i === uncoveredTiles[1] ) ||
 						 ( j === uncoveredTiles[0] && i === uncoveredTiles[1] + 1 ) ||
 						 ( j === uncoveredTiles[0] && i === uncoveredTiles[1] - 1 ) )
 				{
-					Rect( j * 80,i * 80,80,80,"#FFAA00",0.3 );
+					// Rect( j * 80,i * 80,80,80,"#FFAA00",0.3 );
 				}
 				else if( ( j === uncoveredTiles[0] + 1 && i === uncoveredTiles[1] + 1 ) ||
 						 ( j === uncoveredTiles[0] - 1 && i === uncoveredTiles[1] + 1 ) ||
 						 ( j === uncoveredTiles[0] + 1 && i === uncoveredTiles[1] - 1 ) ||
 						 ( j === uncoveredTiles[0] - 1 && i === uncoveredTiles[1] - 1 ) )
 				{
-					Rect( j * 80,i * 80,80,80,"#FFAA00",0.1 );
+					// Rect( j * 80,i * 80,80,80,"#FFAA00",0.1 );
 				}
 				else
 				{
-					Rect( j * 80,i * 80,80,80,"#000",1.0 );
+					// Rect( j * 80,i * 80,80,80,"#000",1.0 );
 				}
 			}
 		}
 	}
 	if( hasWon )
 	{
+		if( winAlpha < 1.0 )
+		{
+			winAlpha += 0.0005;
+		}
+		track1.pause();
+		track2.pause();
+		track3.pause();
+		winTrack.play();
 		player.SetX( 5 * 80 );
 		player.SetY( 9 * 80 );
 		Rect( 0,0,canvas.width,canvas.height,"#000" );
+		//
+		Rect( 1 * 80,0 * 80,80,80,"#FFF",winAlpha );
+		Rect( 1 * 80,1 * 80,80,80,"#FFF",winAlpha );
+		Rect( 1 * 80,2 * 80,80,80,"#FFF",winAlpha );
+		Rect( 1 * 80,3 * 80,80,80,"#FFF",winAlpha );
+		Rect( 2 * 80,3 * 80,80,80,"#FFF",winAlpha );
+		Rect( 3 * 80,3 * 80,80,80,"#FFF",winAlpha );
+		Rect( 3 * 80,0 * 80,80,80,"#FFF",winAlpha );
+		Rect( 3 * 80,1 * 80,80,80,"#FFF",winAlpha );
+		Rect( 3 * 80,2 * 80,80,80,"#FFF",winAlpha );
+		
+		Rect( 7 * 80,0 * 80,80,80,"#FFF",winAlpha );
+		Rect( 8 * 80,0 * 80,80,80,"#FFF",winAlpha );
+		Rect( 6 * 80,1 * 80,80,80,"#FFF",winAlpha );
+		Rect( 9 * 80,1 * 80,80,80,"#FFF",winAlpha );
+		Rect( 6 * 80,2 * 80,80,80,"#FFF",winAlpha );
+		Rect( 7 * 80,2 * 80,80,80,"#FFF",winAlpha );
+		Rect( 8 * 80,2 * 80,80,80,"#FFF",winAlpha );
+		Rect( 9 * 80,2 * 80,80,80,"#FFF",winAlpha );
+		Rect( 6 * 80,3 * 80,80,80,"#FFF",winAlpha );
+		Rect( 9 * 80,3 * 80,80,80,"#FFF",winAlpha );
+		
+		Rect( 4 * 80,5 * 80,80,80,"#FFF",winAlpha );
+		Rect( 5 * 80,5 * 80,80,80,"#FFF",winAlpha );
+		Rect( 4 * 80,6 * 80,80,80,"#FFF",winAlpha );
+		Rect( 4 * 80,7 * 80,80,80,"#FFF",winAlpha );
+		Rect( 4 * 80,8 * 80,80,80,"#FFF",winAlpha );
+		Rect( 5 * 80,8 * 80,80,80,"#FFF",winAlpha );
+		Rect( 6 * 80,8 * 80,80,80,"#FFF",winAlpha );
+		Rect( 7 * 80,8 * 80,80,80,"#FFF",winAlpha );
+		Rect( 7 * 80,7 * 80,80,80,"#FFF",winAlpha );
+		//
+		Text( 80,500,"Thanks for playing!","#FFF","20px Arial" );
+		Text( 80,550,":D","#FFF","20px Arial" );
 	}
 }
