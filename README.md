@@ -8,7 +8,7 @@ Note: Click three times to begin the game.
 
 Note: The sound effects used are available under a Creative Commons Attribution-Noncommercial license: https://creativecommons.org/licenses/by-nc/3.0/us/
 
-Note: While music and sounds have been used for this project, they were not made specifically for it.
+Note: While music and sounds have been used in this project, they were not made specifically for it.
 
 Audio credits:
 
