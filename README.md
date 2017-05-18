@@ -13,5 +13,5 @@ Note: While music and sounds have been used for this project, they were not made
 Audio credits:
 
 	-ALL SOUNDS POSTED BY MIKE KOENIG ON SOUNDBIBLE.
-	-ALL MUSIC CREATED BY WILL HELLIWELL ON SOUNDCLOUD.
+	-ALL MUSIC POSTED BY WILL HELLIWELL ON SOUNDCLOUD.
 	
