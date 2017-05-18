@@ -667,6 +667,30 @@ class TileMap
 				[ 0,0,0,0,0,3,0,0,0,0 ],
 				[ 0,0,0,0,0,3,0,0,0,0 ],
 				[ 0,0,0,0,0,3,0,0,0,0 ]
+			],
+			[
+				[ 0,0,0,0,3,3,3,0,0,0 ],
+				[ 0,0,0,0,3,3,3,0,0,0 ],
+				[ 0,0,0,0,3,3,3,0,0,0 ],
+				[ 0,0,0,0,3,3,3,0,0,0 ],
+				[ 0,0,0,0,3,3,3,0,0,0 ],
+				[ 0,0,0,0,3,3,3,0,0,0 ],
+				[ 0,0,0,0,3,3,3,0,0,0 ],
+				[ 0,0,0,0,3,3,3,0,0,0 ],
+				[ 0,0,0,0,3,3,3,0,0,0 ],
+				[ 0,0,0,0,3,3,3,0,0,0 ]
+			],
+			[
+				[ 0,0,0,0,0,3,0,0,0,0 ],
+				[ 0,0,0,0,0,3,0,0,0,0 ],
+				[ 0,0,0,0,0,3,0,0,0,0 ],
+				[ 0,0,0,3,3,3,3,3,0,0 ],
+				[ 0,0,0,3,0,0,0,3,0,0 ],
+				[ 0,0,0,3,0,0,0,3,0,0 ],
+				[ 0,0,0,3,3,3,3,3,0,0 ],
+				[ 0,0,0,0,0,3,0,0,0,0 ],
+				[ 0,0,0,0,0,3,0,0,0,0 ],
+				[ 0,0,0,0,0,3,0,0,0,0 ]
 			]
 		];
 		this.enemies = [
@@ -829,6 +853,18 @@ class TileMap
 			[
 				new Enemy( 3 * 80,3 * 80,[ 3,3,3,3,3,2,2,2,2,2 ],undefined,2 ),
 				new Enemy( 8 * 80,5 * 80,[ 2,2,2,2,3,3,3,3 ],undefined,2 )
+			],
+			[
+				new Enemy( 6 * 80,1 * 80,[ 0,1,2,3,1,0 ],undefined,2 ),
+				new Enemy( 4 * 80,3 * 80,[ 0,1,3,2,1,0 ],undefined,2 ),
+				new Enemy( 6 * 80,5 * 80,[ 0,1,2,3,1,0 ],undefined,2 ),
+				new Enemy( 4 * 80,7 * 80,[ 0,1,3,2,1,0 ],undefined,2 )
+			],
+			[
+				new Enemy( 3 * 80,3 * 80,[ 1,1,1,3,3,3,3,0,0,0,2,2,2,2 ],undefined,2 ),
+				new Enemy( 7 * 80,3 * 80,[ 2,2,2,2,1,1,1,3,3,3,3,0,0,0 ],undefined,2 ),
+				new Enemy( 7 * 80,6 * 80,[ 0,0,0,2,2,2,2,1,1,1,3,3,3,3 ],undefined,2 ),
+				new Enemy( 3 * 80,6 * 80,[ 3,3,3,3,0,0,0,2,2,2,2,1,1,1 ],undefined,2 )
 			]
 		];
 		this.fallingFloors = [
@@ -1018,7 +1054,24 @@ class TileMap
 				new FallingFloor( 6 * 80,7 * 80,undefined,undefined,2 ),
 				new FallingFloor( 6 * 80,8 * 80,undefined,undefined,2 )
 			],
-			[]
+			[],
+			[],
+			[
+				new FallingFloor( 3 * 80,3 * 80,undefined,undefined,2 ),
+				new FallingFloor( 4 * 80,3 * 80,undefined,undefined,2 ),
+				new FallingFloor( 5 * 80,3 * 80,undefined,undefined,2 ),
+				new FallingFloor( 6 * 80,3 * 80,undefined,undefined,2 ),
+				new FallingFloor( 7 * 80,3 * 80,undefined,undefined,2 ),
+				new FallingFloor( 3 * 80,4 * 80,undefined,undefined,2 ),
+				new FallingFloor( 7 * 80,4 * 80,undefined,undefined,2 ),
+				new FallingFloor( 3 * 80,5 * 80,undefined,undefined,2 ),
+				new FallingFloor( 7 * 80,5 * 80,undefined,undefined,2 ),
+				new FallingFloor( 3 * 80,6 * 80,undefined,undefined,2 ),
+				new FallingFloor( 4 * 80,6 * 80,undefined,undefined,2 ),
+				new FallingFloor( 5 * 80,6 * 80,undefined,undefined,2 ),
+				new FallingFloor( 6 * 80,6 * 80,undefined,undefined,2 ),
+				new FallingFloor( 7 * 80,6 * 80,undefined,undefined,2 )
+			]
 		];
 		this.flameThrowers = [
 			// Scene 0!
@@ -1138,7 +1191,12 @@ class TileMap
 			[
 				new FlameThrower( 0 * 80,6 * 80,75,0 )
 			],
-			[]
+			[],
+			[],
+			[
+				new FlameThrower( 3 * 80,1 * 80,45,3 ),
+				new FlameThrower( 7 * 80,0 * 80,45,2 )
+			]
 		];
 		this.spikes = [
 			// Scene 0!
@@ -1580,7 +1638,22 @@ class TileMap
 			[
 				new Spike( 5 * 80,4 * 80,Random( 0,14 ) ),
 				new Spike( 7 * 80,4 * 80,Random( 0,14 ) )
-			]
+			],
+			[
+				/*
+				new Spike( 4 * 80,9 * 80, 0 ),
+				new Spike( 5 * 80,8 * 80, 1 ),
+				new Spike( 6 * 80,7 * 80, 3 ),
+				new Spike( 5 * 80,6 * 80, 4 ),
+				new Spike( 4 * 80,5 * 80, 6 ),
+				new Spike( 5 * 80,4 * 80, 7 ),
+				new Spike( 6 * 80,3 * 80, 8 ),
+				new Spike( 5 * 80,2 * 80,10 ),
+				new Spike( 4 * 80,1 * 80,11 ),
+				new Spike( 5 * 80,0 * 80,13 )
+				*/
+			],
+			[]
 		];
 		this.currentMap = -1;
 		this.colors = [

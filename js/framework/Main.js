@@ -8,6 +8,7 @@ var currentScene = 0;
 var sceneProgress = 0;
 
 var winAlpha = 0.0;
+var winAlphaAdd = 0.0005;
 
 var keyMap = [];
 var uncoveredTiles = [ 0,0 ];
@@ -19,7 +20,8 @@ var tileMap = new TileMap();
 var isStarted = false;
 var hasWon = false;
 
-var track1 = new Audio( 'audio/level_track_1.wav' );
+// TODO: Fix audio track 1!
+var track1 = new Audio( 'audio/level_track_1.mp3' );
 var track2 = new Audio( 'audio/level_track_2.wav' );
 var track3 = new Audio( 'audio/level_track_3.wav' );
 var winTrack = new Audio( 'audio/win_final.mp3' );
@@ -115,12 +117,12 @@ function Update()
 				// sceneProgress = 0;
 				currentScene = 1;
 			}
-			if( sceneProgress === 25 && currentScene === 1 )
+			if( sceneProgress === 35 && currentScene === 1 )
 			{
 				// sceneProgress = 0;
 				currentScene = 2;
 			}
-			if( sceneProgress === 40 && currentScene === 2 )
+			if( sceneProgress === 50 && currentScene === 2 )
 			{
 				hasWon = true;
 				// TODO: Make winning happen.
@@ -273,7 +275,8 @@ function Draw()
 	{
 		if( winAlpha < 1.0 )
 		{
-			winAlpha += 0.0005;
+			winAlpha += winAlphaAdd;
+			winAlphaAdd += 0.00005;
 		}
 		track1.pause();
 		track2.pause();
